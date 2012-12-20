@@ -1,0 +1,15 @@
+Software Carpentry's aim is to teach researchers (usually graduate students) basic computing concepts and skills so that they can get more done in less time, and with less pain. We think of it as what people ought to know before they tackle anything with "peta" or "cloud" in its name; our hope is that if we give people basic skills, they'll be better able to take advantage of more sophisticated things.
+
+Our usual two-day curriculum is:
+
+day 1 a.m.: Introduction to Unix shell. We show participants a dozen basic commands, but the real aim is to introduce them to pipes, for loops and history (to automate repetitive tasks), and the idea of scripting.
+
+day 1 p.m.: Introduction to Python. Here, the aim is two-fold: to show them how to build components that can be used in pipelines, and to show them when and why to break code into reusable functions.
+
+day 2 a.m.: Version control for file sharing, collaboration, and reproducibility.
+
+day 2 a.m.: Testing. We introduce the idea of tests as a way to specify what a program is supposed to do, then show participants how to structure unit tests using an xUnit-style library.
+
+day 2 p.m.: Either an introduction to databases and SQL, or an introduction to number crunching using NumPy, depending on the audience.
+
+We find workshops go a lot better if people come in groups, e.g., 4-5 people from one lab, half a dozen from another department or institute, etc., so that they are less inhibited about asking questions, and can support each other afterward. We nominally aim for 40 people per workshop, and are always grateful for local helpers to wander the room and answer questions during practicals.  Our instructors are all volunteers, so the only cost to host sites is travel and accommodation (basically, a couple of domestic plane tickets and hotel rooms, and instructors can usually give an academic talk in their specialty while they're in town).

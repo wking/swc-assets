@@ -1,0 +1,14 @@
+Hi,
+We're scheduling Software Carpentry workshops for the coming year, and were wondering if you'd be interested in hosting one.  Our aim is to teach researchers (usually graduate students) basic computing concepts and skills so that they can get more done in less time, and with less pain.  Our usual two-day curriculum includes:
+- The Unix Shell
+- Version Control
+- Testing
+- Python
+- Databases
+- Number Crunching
+We're funded by the Sloan Foundation and Mozilla, and our instructors are volunteers, so the only cost to host sites is their travel and accommodation. We aim for 40 people per workshop, and look for 2-3 local helpers to assist during practicals; we can handle registration through EventBrite, or leave it up to the host site. Two independent assessments in the spring of 2012 confirmed that what we're doing actually helps, so if this sounds interesting, we'd welcome a chance to chat at greater length.
+Thanks,
+Dr. Greg Wilson
+http://software-carpentry.org
+
+

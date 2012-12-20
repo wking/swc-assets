@@ -1,0 +1,33 @@
+Computers are as important to modern science as telescopes and test tubes.
+Unfortunately, most scientists are never taught how to use them
+effectively: most have to figure out for themselves how to build,
+validate, maintain, and share complex programs.  This is as fair as
+teaching someone addition and then expecting them to figure out calculus
+on their own, and about as likely to succeed.
+
+Scientists trying to take advantage of tera- and peta-scale computing
+pay a particularly high price for their lack of background skill.  How
+to use parallelism effectively is still an open research problem in
+computer science; when it's combined with leading-edge problems in
+physics, mechanical engineering, or biochemistry, the complexities
+compound more often than they cancel out.
+
+It doesn't have to be like this.  Since its first run at Los Alamos
+National Laboratory in 1997, the Software Carpentry course has taught
+scientists and engineers the basic skills they need to use computers more
+effectively.  Its topics are those things left standing after various
+bandwagons have rolled through, including version control, automated
+builds, unit testing, how to crunch common data formats, and small-scale
+software project management.
+
+Thanks to generous support from SciNet, SHARCNET, and others, Software
+Carpentry will be offered online this fall to 40 students at Ontario
+universities.  The course will be taught online: each week, students will
+view a series of video lectures and work through exercises with support
+from the instructor and TAs through Skype, desktop sharing, web forums,
+and other channels.
+
+If you, your colleagues, or your students are interested, please to go
+http://software-carpentry.org/blog/ for details, or contact the course
+administrator at info@software-carpentry.org.  The course is non-credit,
+but there is no charge for enrolment.

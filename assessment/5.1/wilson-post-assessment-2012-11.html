@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <title>Sample Pre-Assessment Questions</title>
+  </head>
+  <body>
+    <h1>Sample Pre-Assessment Questions</h1>
+    <h2>by Greg Wilson</h2>
+
+    <h2>Q1</h2>
+
+    <p>A user opens a new shell window and types:</p>
+
+<pre>cat humanoids.txt</pre>
+
+    <p>The output is:</p>
+
+<pre>81 troll
+2  goblin
+5  orc</pre>
+
+    <p>She then types:</p>
+
+<pre>sort humanoids.txt</pre>
+
+    <p>The output is:</p>
+
+<pre>2  goblin
+5  orc
+81 troll</pre>
+
+    <p>because:</p>
+
+    <ol>
+      <li>The number 2 is less than the number 5, and the number 5 is less than the number 81.</li>
+      <li>The letter 'g' comes before the letter 'o', and the letter 'o' comes before the letter 't'.</li>
+      <li>The output would actually be different than what's shown.</li>
+      <li>Other: ____________________</li>
+    </ol>
+
+    <h2>Q2</h2>
+
+    <p>A user opens a new shell window and types:</p>
+
+<pre>for filename in goblin.txt orc.txt troll.txt
+do
+    echo 'file:' $filename
+    cat $filename
+    echo
+done</pre>
+
+    <p>The output is:</p>
+
+<pre>file: goblin.txt
+goblin
+
+file: orc.txt
+orc
+orc
+
+file: troll.txt
+troll
+troll
+troll</pre>
+
+    <p>She then creates a shell script called <code>contents.sh</code> in the same directory and puts the following commands in it:</p>
+
+<pre>for species in *
+do
+    echo 'file:' $species
+    cat $species
+    echo
+done</pre>
+
+    <p>Does this produce the same output as the original interactive command?</p>
+
+    <ol>
+      <li>Yes, but only if there are no other files in the same directory.</li>
+      <li>Yes, but only if she runs the script using <code>bash contents.sh *.txt</code>.</li>
+      <li>No, because <code>species</code> isn't a file name.</li>
+      <li>Other: ____________________</li>
+    </ol>
+
+    <h2>Q3</h2>
+
+    <p>The file <code>humanoids.txt</code> contains:</p>
+
+<pre>81 troll
+2  goblin
+5  orc</pre>
+
+    <p>A user writes the following Python program:</p>
+
+<pre>values = []
+for line in 'humanoids.txt':
+    fields = line.split()
+    first = fields[0]
+    values.append(first)
+print values[0]</pre>
+
+    <p>What is the output?</p>
+
+    <ol>
+      <li>The number 8, because that is the first digit of 81 + 2 + 5.</li>
+      <li>The string '81 troll', because that is the first line of <code>humanoids.txt</code>.</li>
+      <li>The letter 'h', because that is the first character of <code>humanoids.txt</code>.</li>
+      <li>Other: ____________________</li>
+    </ol>
+
+    <h2>Q4</h2>
+
+    <p>A user writes the following Python program:</p>
+
+<pre>total = 0
+numbers = [1, 2, 3]
+for outer in numbers:
+    for inner in ______:
+        total += outer
+print total</pre>
+
+    <p>What should the user put in the blank so that the program's output is 14?</p>
+
+    <ol>
+      <li><code>numbers[0:total]</code></li>
+      <li><code>numbers[0:outer]</code></li>
+      <li><code>numbers.reverse()</code></li>
+      <li>Other: ____________________</li>
+    </ol>
+
+  </body>
+</html>

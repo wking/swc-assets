@@ -1,7 +1,7 @@
-assets
-======
+Software Carpentry Assets
+=========================
 
-Container for publicly-visible Software Carpentry material that doesn't belong on the web site.
+This repository contains public Software Carpentry material that doesn't belong on the web site, organized as follows:
 
 * advertising: advertising materials.
 * assessment: assessment.

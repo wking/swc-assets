@@ -270,3 +270,4 @@ I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n
 * [SciPy Cookbook](http://www.scipy.org/Cookbook)
 * [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/)
 * [Hacker High School](http://docs.python-guide.org/en/latest/)
+* [Three Second Distraction Doubles Work Errors](http://www.futurity.org/top-stories/3-second-distraction-doubles-work-errors/)

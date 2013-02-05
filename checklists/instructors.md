@@ -1,26 +1,28 @@
 ### Checklist for SWC Boot Camp Instructors
 
 #### Before
-- Book your transport to the boot camp location and your lodging. (Save your
+- Book transport to the boot camp location, and lodging. (Save your
 	receipts!)
-- Use material from SWC website and elsewhere to prepare your session(s)
-- Prepare the materials you'll need for your session(s)
-  - data sets
-	- cheat sheets
-	- repositories
-	- etc.
-	- etherpad notepads
+- Prepare your session(s)
+- Review Mike Jackson's <a href="http://www.software.ac.uk/blog/2013-01-08-top-tips-instructors-software-carpentry-boot-camp">Top Tips for instructors</a>
+- Prepare the materials you'll need:
+    - data sets
+	  - cheat sheets
+	  - repositories
+	  - etc.
+	  - etherpad notepads
 
-      You can set up as many etherpad notepads as you like. Stick to a sensible
-			naming convention (e.g., <code>bootcampname-date-lesson</code>) so we can
-			track down the etherpads later.  Or create an account on
-			etherpad.mozilla.org to automatically track the pads you create. 
-- Make material, exercises and sample data available to attendees and other
-	instructors
-- Familiarise yourself with the other instructors' materials, in case someone
-	can't make it to the boot camp
+        You can set up as many etherpad notepads as you like. Stick to a
+				sensible naming convention (e.g.,
+				<code>bootcampname-date-lesson</code>) so we can track down the
+				etherpads later.  Or create an account on etherpad.mozilla.org to
+				automatically track the pads you create. 
+
+- Make supporting material, exercises and sample data available to attendees
+	and other instructors
+- Familiarise yourself with the other instructors' materials, in case someone 
+	can't make it to the boot camp and you have to heroically step in
 - Set up the boot camp software on your laptop
-
 
 #### After
 

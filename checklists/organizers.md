@@ -50,14 +50,10 @@
 
 - Order coffee, pastries, or whatever other catering you are providing. Make
 	sure there is a table to put food on.
-- Send setup instructions to attendees. Make it clear that they are
-	expected to set up their computer before they attend the boot camp, and to
-	email the organizers or SWC admin if they have a problem.
 
 #### The Week Before
 
 - Request confirmation from attendees that they will be attending.
-- Remind attendees of the setup page.
 - Identify a suitable pub or bar for socialising after the first day.
 - Ask if your instructors and helpers would like to go out for dinner.
 

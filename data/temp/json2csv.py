@@ -20,7 +20,7 @@ years.sort()
 
 countries = raw.keys()
 countries.sort()
-print ',' + ','.join(countries)
+print 'YEAR,' + ','.join(countries)
 
 for (i, y) in enumerate(years):
     sys.stdout.write(str(y))

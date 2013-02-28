@@ -271,3 +271,7 @@ I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n
 * [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/)
 * [Hacker High School](http://docs.python-guide.org/en/latest/)
 * [Three Second Distraction Doubles Work Errors](http://www.futurity.org/top-stories/3-second-distraction-doubles-work-errors/)
+* [How to implement an algorithm from a scientific paper](http://codecapsule.com/2012/01/18/how-to-implement-a-paper/)
+* [Getting Started With Pandas](http://blog.kaggle.com/2013/01/17/getting-started-with-pandas-predicting-sat-scores-for-new-york-city-schools/)
+* [Python Testing](http://pythontesting.net/framework/nose-introduction/)
+* [PyTest](http://pytest.org/latest/)

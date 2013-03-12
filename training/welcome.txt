@@ -1,0 +1,15 @@
+Hello everyone,
+
+Welcome to the online training course for people who wish to teach Software Carpentry.  Our goal over the next 10 weeks is to introduce you to a few core concepts of educational psychology, instructional design, and empirical software engineering, so that you will be better able to teach basic computing skills to your fellow scientists.  Here's what you need to get started:
+
+1. We are using a WordPress blog at http://teaching.software-carpentry.org to manage the course.  I'll create an account for each of you; once you get your credentials by email, please log in and write a three-line biography to introduce yourself to your fellow learners.  (Please put it in the category "Biography" --- if you'd like to see what people in previous rounds have written, have a look at http://teaching.software-carpentry.org/category/biography/.)
+
+2. Please pick up copies of "How Learning Works" and "Facts and Fallacies of Software Engineering" (there are links to both on http://teaching.software-carpentry.org/about/).  (Your university library should have them both, or you can find them on Amazon.)  The first, from a group at Carnegie-Mellon, is an up-to-date summary of what research tells us about learning and educational practice; the second is slightly out-of-date, but still the most readable summary of what we actually know about software development, and why we believe it's true.
+
+3. That same page has a link to a PDF of a chapter by Prof. Mark Guzdial (Georgia Tech) on why programming is hard to teach.  Please grab that and read it this week.
+
+4. Finally, please go to http://doodle.com/34b4uafc4cks9edi and mark down the times you can be available next week for an hour-long online meeting.  (Note that the slots are 11:00-13:00 and 18:00-20:00 Eastern; if all goes well, Doodle will show them adjusted for your time zone, but you may want to double check.)  Given the geographic spread of this group, we will probably have to run two meetings (one for Europeans and North Americans, another for Australians), but we'll figure that out once you've all signed up.
+
+Thanks again for your interest in Software Carpentry --- I'm looking forward to working with you.
+Cheers,
+Greg Wilson

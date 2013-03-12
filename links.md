@@ -275,3 +275,4 @@ I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n
 * [Getting Started With Pandas](http://blog.kaggle.com/2013/01/17/getting-started-with-pandas-predicting-sat-scores-for-new-york-city-schools/)
 * [Python Testing](http://pythontesting.net/framework/nose-introduction/)
 * [PyTest](http://pytest.org/latest/)
+* [Python Physics with Units](http://www.southampton.ac.uk/~fangohr/blog/physical-quantities-numerical-value-with-units-in-python.html)

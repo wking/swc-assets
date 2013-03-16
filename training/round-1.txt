@@ -1,0 +1,12 @@
+Hi everyone,
+
+Thanks for filling in the Doodle poll.  As expected, we're going to have to run two meetings on Wednesday, March 20, to accommodate everyone's time zone: one at 11:00 am Eastern (which I believe is 3:00 pm in the UK, thanks to Daylight Savings Time --- someone please check me on this), the other at 7:00 pm Eastern (which is 10:00 am Thursday March 21 in Sydney and Melbourne --- a check would also be welcome).  To connect:
+
+1. We will use +1 800 707 2533 for the conference call --- you can connect directly inside North America, and connect via Skype from elsewhere free of charge.  When you connect, the password is 369 (*without* a '#' after it), and the conference ID is 7618 (*with* a '#' after it).  Please try to use a headset with a microphone rather than an open-air microphone or a cell phone in speaker mode to connect --- feedback and background noise can be pretty disruptive.
+
+2. Please also open a browser to https://etherpad.mozilla.org/swc-teaching, and fill in your name in the upper right --- we'll use this for note-taking during the call.
+
+Based on past experience, it'll take about 10 minutes to get everyone into the call the first time around (it's much faster on subsequent calls), and about 30 minutes to work through the introduction, outline what we're going to do in the coming weeks, and set first-round goals.  If you have any questions, please give me a shout --- otherwise, I look forward to seeing you all on Wednesday.
+
+Cheers,
+Greg

@@ -1,20 +1,6 @@
-\documentclass{pnastwo}
+\documentclass{article}
+\usepackage{authblk}
 
-\usepackage[symbol*]{footmisc}
-
-%%%%%%%%%%%%
-%% For PNAS Only: change as appropriate
-\url{http://arxiv.org/abs/1210.0530}
-\copyrightyear{2012}
-\issuedate{Issue Date whatever}
-\volume{Volume whatever}
-\issuenumber{Issue Number whatever}
-\footlineauthor{Wilson et al.}
-%\setcounter{page}{2687} %Set page number here if desired
-%%%%%%%%%%%%
-
-\newcommand{\comment}[2]{\[#1\]\footnote{{#1}: #2}}
-\newcommand{\fixme}[1]{\textbf{FIXME: {#1}}}
 \newcommand{\footurl}[1]{\footnote{\texttt{#1}}}
 \newcommand{\term}[1]{\emph{#1}}
 
@@ -24,55 +10,39 @@
 
 \newcommand{\practicesection}[2]{\refstepcounter{PracticeSection}\section{\arabic{PracticeSection}.~{#1}}\label{#2}}
 
-\begin{document}
-
 \title{Best Practices for Scientific Computing}
 \date{\today}
 
-\author{
-  {Greg~Wilson}%
-  \affil{1}{\small{Software Carpentry (gvwilson@software-carpentry.org)}},
-  %
-  {D.A.~Aruliah}%
-  \affil{2}{\small{University of Ontario Institute of Technology (Dhavide.Aruliah@uoit.ca)}},
-  %
-  {C.~Titus~Brown}%
-  \affil{3}{\small{Michigan State University (ctb@msu.edu)}},
-  %
-  {Neil P.\ Chue Hong}%
-  \affil{4}{\small{Software  Sustainability Institute (N.ChueHong@epcc.ed.ac.uk)}},
-  %
-  {Matt~Davis}%
-  \affil{5}{\small{Space Telescope Science Institute\newline (mrdavis@stsci.edu)}},
-  %
-  {Richard~T.~Guy}%
-  \affil{6}{\small{University of  Toronto (guy@cs.utoronto.ca)}},
-  %
-  \newline{Steven~H.D.~Haddock}%
-  \affil{7}{\small{Monterey Bay Aquarium Research Institute\newline (steve@practicalcomputing.org)}},
-  %
-  {Katy~Huff}%
-  \affil{8}{\small{University of  Wisconsin (khuff@cae.wisc.edu)}},
-  %
-  {Ian~M.~Mitchell}%
-  \affil{9}{\small{University of British Columbia (mitchell@cs.ubc.ca)}},
-  %
-  {Mark~D.~Plumbley}%
-  \affil{10}{\small{Queen Mary University of London  (mark.plumbley@eecs.qmul.ac.uk)}},
-  %
-  {Ben~Waugh}%
-  \affil{11}{\small{University College London (b.waugh@ucl.ac.uk)}},
-  %
-  \newline{Ethan~P.~White}%
-  \affil{12}{\small{Utah State\newline University  (ethan@weecology.org)}},
-  %
-  {Paul~Wilson}%
-  \affil{13}{\small{University of Wisconsin  (wilsonp@engr.wisc.edu)}}
-}
+\author[a]{Greg~Wilson}
+\author[b]{D.A.~Aruliah}
+\author[c]{C.~Titus~Brown}
+\author[d]{Neil~P.~Chue~Hong}
+\author[e]{Matt~Davis}
+\author[f]{Richard~T.~Guy}
+\author[g]{Steven~H.D.~Haddock}
+\author[h]{Katy~Huff}
+\author[i]{Ian~M.~Mitchell}
+\author[j]{Mark~D.~Plumbley}
+\author[k]{Ben~Waugh}
+\author[l]{Ethan~P.~White}
+\author[h]{Paul~Wilson}
+
+\affil[a]{\small Software Carpentry / gvwilson@software-carpentry.org}
+\affil[b]{\small University of Ontario Institute of Technology / Dhavide.Aruliah@uoit.ca}
+\affil[c]{\small Michigan State University / ctb@msu.edu}
+\affil[d]{\small Software Sustainability Institute / N.ChueHong@epcc.ed.ac.uk}
+\affil[e]{\small Space Telescope Science Institute / mrdavis@stsci.edu}
+\affil[f]{\small University of  Toronto / guy@cs.utoronto.ca}
+\affil[g]{\small Monterey Bay Aquarium Research Institute / steve@practicalcomputing.org}
+\affil[h]{\small University of  Wisconsin / \{khuff,wilsonp\}@cae.wisc.edu}
+\affil[i]{\small University of British Columbia / mitchell@cs.ubc.ca}
+\affil[j]{\small Queen Mary University of London  / mark.plumbley@eecs.qmul.ac.uk}
+\affil[k]{\small University College London / b.waugh@ucl.ac.uk}
+\affil[l]{\small Utah State University  / ethan@weecology.org}
+
+\begin{document}
 
 \maketitle
-
-\begin{article}
 
 \begin{abstract}
 Scientists spend an increasing amount of time building and using
@@ -743,7 +713,5 @@ important scientific questions that would otherwise not be possible.
 
 \bibliographystyle{plain}
 \bibliography{best-practices-scientific-computing-2012}
-
-\end{article}
 
 \end{document}

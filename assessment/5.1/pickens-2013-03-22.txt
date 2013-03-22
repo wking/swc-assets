@@ -1,0 +1,81 @@
+From Cait Pickens:
+
+The surveys we have: These were developed by someone who specializes
+in assessment (Libarkin) but has no tech/programming/SWC experience.
+As a result, (I think) some of the items measure concepts that would
+not be very interesting to SWC or other people looking to assess the
+value/efficacy/impact of SWC. They need to be reworked. Doing so
+*well* requires time, iterative development (which includes
+interviewing students and experts alike), pilot testing, and
+valid/reliable analysis of the items. To give an idea of the timeline
+for this process: Libarkin designed a ~60 item concept inventory for
+geology and the process took 3+ years.
+
+My suggestions: If we want to know about *learning gain*, then we need
+something like a concept inventory. It wouldn't have to be 60
+questions long. Maybe ~10 for each topic in SWC and students then take
+a randomized online exam with 2 questions from each pool of 10. It
+would require them to actually *do* the work/thinking, rather than
+rate 1-4 whether or not they believe they can do the work. I'm
+interested to see if my summer work can go in this direction, but I
+have yet to talk with Greg about that plan in depth.
+
+Why we aren't using the surveys widely: It is my understanding that
+Greg wants to have a good system set up for assessment before we make
+the all-call to SWC instructors to use the assessments. This means
+that we need:
+
+(1) the assessments themselves (which requires developing good items,
+    piloting the items to verify/show that they are "good," testing
+    for validity and reliability, etc),
+
+(2) a way to administer the assessments (online? paper?),
+
+(3) a place for all of the data to go / be stored (that respects
+    participants' privacy),
+
+(4) a process for analyzing and interpreting the data,
+
+(5) a standard way for reporting out / publishing the data, and
+
+(6) someone to do all that work. Thus far, the surveys have been
+    readily available for anyone to use who has wanted to (I
+    believe). There just hasn't been a push to get *everyone* using
+    them, because doing so is probably premature.
+
+Other random things to consider regarding assessment, if you're  
+interested:
+
+(1) response rate (if someone drops out in the first 1/2 of a
+    workshop, then they never take the post-assessment, how do we find
+    out *why*?);
+
+(2) longitudinal data (can we get data from people ~6 months after
+    they take a workshop to see if they still use anything they
+    learned in the boot camp? if so, how do we reliably reach these
+    people to get that data?);
+
+(3) instructor bias (every boot camp is different and instructors
+    teach very differently. that's a lot of variables to keep track
+    of. can we even compare the data we collect from different
+    workshops, or are there too many differing variables?);
+
+(4) what does Mozilla actually want? are scientists more effective?
+    (we are possibly assuming that learning gain correlates with more
+    effective scientists / increased output. is that a flawed
+    fundamental assumption? should we perhaps measure scientific
+    output differently somehow?);
+
+(5) other modes of measurement (like classroom observation, tracking
+    student use of GitHub after the boot camp, # of publications, etc)
+    - these are just the problems that I'm coming up with off the top
+    of my head. We will need answers to all of them eventually,
+    though.
+
+Lastly, I think we should consider working more closely with people
+who actually do evaluation for a living. There are entire PhD programs
+in evaluation. We need some feedback from those types of people when
+developing our assessments. I know some at MSU. Networking to find
+other evaluation/assessment people at different schools would be a
+good thing to do though. Let's get them in on the discussion whenever
+possible?

@@ -1,0 +1,58 @@
+From Cait Pickens:
+
+My suggestions:
+
+(1) Define learning objectives first (best practices in [1], [2],
+    [3]). [4] is my blog-letter to Greg about learning
+    objectives. Greg already has a lot of SWC LOs by the way, so these
+    need not be developed from scratch. We will require explicit
+    learning objectives for each major lesson of SWC. Document them
+    clearly. Something like this...
+
+    Lesson: Programming with Python
+
+    LO1: Students will be able to parse multiple text files and store
+         them in appropriate data structures (including lists,
+         dictionaries, and sets).
+
+    LO2: Students will be able to perform statistical analyses on
+         their text-based datasets using Python libraries (such as...).
+
+***Don't use words like "know" and "understand" in LOs. They are far
+too vague to be able to measure/quantify***
+
+(2) Think about what knowledge students must demonstrate in order to
+    show competently achieving those learning objectives.
+
+    In order to measure LO1 above, we would need to see if students
+    can read in a file and parse it. We would also have to test their
+    understanding of when to use different data structures and how to
+    build them. Can these all be done in one question? Probably
+    not. But we want a *short* and *non intimidating* assessment, so
+    we need as few questions as possible.
+
+(3) Once you have all of that, start developing questions. Start with
+    Greg's reading group. He has them writing multiple choice
+    questions in a thoughtful manner. These would probably be a good
+    place to get ideas and some questions to tweak/refine.
+
+    How would a student actually *show* knowledge about parsing a
+    file?  What would a question look like? For a concept inventory,
+    we need multiple choice. What would good wrong answers be?
+
+(4) In the assessment folder in the repo, start a series of files that
+    have all of this data documented clearly (in case it needs to be
+    modified over time, and so that it is easy to write papers about
+    all this work later down the road). The docs could be something
+    like assess_python.md, assess_versioncontrol.md, etc. They would
+    contain the learning objectives, the proposed method for measuring
+    the LOs, and ideas for questions for each LO. It would be really
+    easy then for people to go in and add / refine questions for each
+    specific LO.
+
+--Cait
+
+[1] http://www.nerc.com/files/Instructional_guide_writing_Objectives.pdf
+[2] http://sph.washington.edu/gateway/learning_objectives.asp
+[3] http://www.oucom.ohiou.edu/fd/writingobjectives.pdf
+[4] http://michigancomputes.wordpress.com/2013/01/16/how-to-write-good-learning-objectives/

@@ -33,53 +33,60 @@ FIXME: write abstract
 Between January 2012 and July 2013,
 Software Carpentry ran 92 two-day workshops on basic computing skills.
 More than 100 people helped over 3000 scientists learn about
-modular program construction,
+program design,
 task automation,
 version control,
 and quality assurance---the unglamorous but essential foundations
-on which high-performance computing,
+for high-performance computing,
 data science,
-and anything with ``cloud'' in its name rest.
-This article summarizes how we do this,
+and anything with ``cloud'' in its name.
+This article summarizes how we teach,
 what we've learned from doing it,
 and what we plan to do next.
 
-\section{Red, Red, Orange, Green}
+\section{How We Got Here}
+
+\subsection*{Red}
 
 In 1995--96,
-Wilson organized a series of articles titled,
+Greg Wilson organized a series of articles titled,
 ``What Should Computer Scientists Teach to Physical Scientists and Engineers?''
 \cite{wilson1996}.
 The articles grew out of the frustration he felt working with scientists
 who wanted to parallelize complex simulation programs
-but didn't know when, why, or how to modularize their code,
+but didn't know how to modularize their code,
 test it,
-or track changes with version control
+or track changes
 \cite{wilson2006a}.
-
-In response to those articles,
+In response,
 John Reynders
 (then director of the Advanced Computing Laboratory at Los Alamos National Laboratory)
 invited Wilson and Brent Gorda to teach
-a week-long course to LANL staff
-on structured program design,
-task automation,
-version control,
-quality assurance,
-and other topics that are essential to building and using scientific software,
-but which scientists are usually not taught.
+a week-long course to LANL staff.
 The course ran for the first time in July 1998,
 and was repeated eight times over the next four years.
-FIXME: explain why it eventually faded.
+It eventually wound down for two reasons:
+the principal players had all moved on to other responsibilities,
+and the intensive week-long format wasn't particularly effective.
+
+\subsection*{Red}
 
 The course materials were updated and released under a Creative Commons license in 2004--05
 thanks to a grant from the Python Software Foundation \cite{wilson2006b}.
-The hope was it would that scientists would add lessons of their own.
-It soon became clear that this wasn't going to happen:
+The hope was that scientists would add lessons of their own,
+but it soon became clear that this wasn't going to happen:
 while several thousand people visited the site each month,
 only a dozen ever offered corrections,
 and only three ever offered new material.
-FIXME: and without live classes...
+In retrospect,
+this was primarily because lessons are not as well suited to mass editing
+as Wikipedia-style encyclopedia entries.
+Good lessons are narratives,
+not merely facts presented in sequence:
+editing a lesson has more in common with writing a novel
+(or at least a short story).
+
+\subsection*{Orange}
 
 Wilson rebooted Software Carpentry in May 2010
 with support from several organizations\footnote{Indiana University,
@@ -92,18 +99,30 @@ SciNet,
 SHARCNet,
 and the UK Met Office.}.
 More than 120 short video lessons were recorded during the following 12 months,
-and Wilson ran some more week-long classes.
+and six more week-long classes were run.
 Once again,
-only a handful of other people\footnote{Orion Buske, Tommy Guy, Jason Montojo, Jon Pipitone, and Ethan White.} contributed.
-FIXME: week-long courses too much for learners; too much for a single instructor.
+only a handful of other people\footnote{Orion Buske, Tommy Guy, Jason Montojo, Jon Pipitone, and Ethan White.} contributed material,
+and once again,
+we established that five eight-hour days are more wearying than enlightening.
+On the upside,
+it was clear by mid-2011 that there was more demand for this kind of training than ever.
+
+\subsection*{Green}
 
 With new support from the Sloan Foundation and Mozilla,
-we rebooted again in January 2012.
+Software Carpentry rebooted again in January 2012.
 This time,
-the model was a two-day ``boot camps'',
-and we recruited participants from those boot camps
-to become instructors in their own right.
-The results have been dramatically better:
+the model was two-day ``boot camps''
+modeled on those pioneered by The Hacker Within,
+a grassroots group of grad students helping grad students
+at the University of Wisconsin -- Madison.
+Shortening the boot camps allowed us to reach more people,
+which in turn finally created
+the critical mass needed to sustain online discussion.
+Reaching more people also allowed us to recruit more instructors
+from boot camp participants.
+
+The results are dramatically better than previous iterations.
 Software Carpentry now has over 70 qualified instructors,
 runs six or seven boot camps a month,
 and is almost self-sustaining.

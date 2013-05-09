@@ -13,6 +13,8 @@ In order to evaluate SWC's impact, we need to assess what we are doing in a vali
   knowledge in a language independent manner][Tew2010].
 * Juha Sorva.  [Visual Programming Simulation in Introductory
   Programming Education][Sorva2012].  (especially pages 17&ndash;139)
+* Blog about validity in assessment: http://michigancomputes.wordpress.com/2013/04/03/validity-when-evaluating-learning/
+* Blog about reliability in assessment: http://michigancomputes.wordpress.com/2013/04/28/reliability-when-evaluating-learning/
 
 [Tew2010]: http://hdl.handle.net/1853/37090
 [Sorva2012]: http://lib.tkk.fi/Diss/2012/isbn9789526046266/

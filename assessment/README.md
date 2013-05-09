@@ -5,7 +5,9 @@ In order to evaluate SWC's impact, we need to assess what we are doing in a vali
 1. Require registration for boot camps on Eventbrite. Embedded in this registration is a skills survey. Approximately 1 week before the workshop, email Cait Pickens requesting the analysis of results. Instructors will be provided a description of their student audience.
 2. **On the morning of first day** of the boot camp, distribute the pre-assessment survey. Ideally, set aside 10 minutes some time before lunch for students to complete the survey. Collect data in paper form if necessary.
 3. **At the end of the last day** of the boot camp, distribute the post-assessment survey. Again, the instrument requires approximately 10 minutes to complete. Dedicate specific workshop time to complete the survey. Collect data in paper form if necessary.
-4. If any paper assessment materials were collected, snail mail them to Cait Pickens. Mailing address upon request, caitlynpickens@gmail.com
+4. If any paper assessment materials were collected, snail mail them to Cait Pickens. Mailing address upon request.
+
+Cait Pickens: caitlynpickens@gmail.com
 
 ###Suggested reading:
 

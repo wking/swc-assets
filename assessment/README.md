@@ -9,7 +9,7 @@ In order to evaluate SWC's impact, we need to assess what we are doing in a vali
 
 Cait Pickens: caitlynpickens@gmail.com
 
-###Suggested reading:
+###Background reading (for the brave):
 
 * Allison Tew.  [Assessing fundamental introductory computing concept
   knowledge in a language independent manner][Tew2010].

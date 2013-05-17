@@ -21,130 +21,72 @@
 
 ## Abstract
 
-FIXME: write abstract
+Over the last 15 years,
+Software Carpentry has evolved into a worldwide volunteer effort
+to raise standards in scientific computing.
+This article explain what we have learned as we've grown,
+and the challenges we now face.
 
 ## Introduction
 
-Between January 2012 and July 2013,
-Software Carpentry ran 92 two-day workshops on basic computing skills.
-More than 100 people helped over 3000 scientists learn about
+In January 2012,
+John Cook posted this to his widely-read blog
+[cook2012][cook2012]:
+
+> In a review of linear programming solvers from 1987 to 2002,
+> Bob Bixby says that solvers benefited as much from algorithm improvements as from Moore's law:
+> "Three orders of magnitude in machine speed
+> and three orders of magnitude in algorithmic speed add up to six orders of magnitude in solving power.
+> A model that might have taken a year to solve 10 years ago can now solve in less than 30 seconds."
+
+A million-fold speedup is impressive,
+but faster hardware and better algorithms are only two sides to the iron triangle of programming.
+The third is programming itself,
+and while improvements to languages and tools have undoubtedly made software developers more productive since 1987,
+the speedup is measured in percentages,
+not orders of magnitude.
+Outwith the minority who do high-performance computing,
+the time it takes the silent majority of scientists to produce a new computational result
+is increasingly dominated by the time required to write, test, debug, install, and maintain software.
+
+The problem is,
+most scientists have never been taught how to do this.
+Their undergraduate programs typically include either
+a generic introduction to programming,
+or a statistics or numerical methods course
+in which they're expected to pick up programming on their own;
+they are almost never told that version control exists,
+and rarely if ever shown how to design a maintainable program in a systematic way,
+or how to turn the last twenty commands they typed
+into a re-usable script.
+As a result,
+they routinely spend hours doing things that could be done in minutes,
+or failing to do things at all because they don't know where to start.
+
+This is where Software Carpentry comes in.
+We ran 92 two-day workshops between January 2012 and July 2013.
+In them,
+more than 100 people helped over 3000 scientists learn about
 program design,
 task automation,
 version control,
 testing,
-and the unglamorous but essential foundations
-for high-performance computing,
-data science,
-and anything with "cloud" in its name.
-This article summarizes how we teach,
-what we've learned from doing it,
-and what we plan to do next.
+and the other unglamorous but time-tested skills
+that help scientists get more done in less time,
+and have more confidence in their results.
+Two independent assessments in 2012 showed that
+attendees are actually learning and applying at least some of what we taught,
+but many still find it hard to turn learning into practice,
+and several of our experiments---most notably our attempts to teach online---have been failures.
 
-## Context: The Missing Side of the Triangle
+## Red, Red, Orange, Green
 
-Back in 2010, Moshe Vardi wrote an opinion piece titled "<a href="http://cacm.acm.org/magazines/2010/9/98038-science-has-only-two-legs/fulltext">Science Has Only Two Legs</a>",
-in which he argued that computational science is just another form of experimental science,
-and that programs should be held to the same standards as other pieces of experimental apparatus.
-We're firmly in this camp.
+Some historical context will help explain
+where and why we have succeeded and failed.
 
-In March 2012,
-<a href="http://www.hanselman.com/blog/AboutMe.aspx">Scott Hanselman</a> wrote a blog post titled
-<a href="http://www.hanselman.com/blog/DarkMatterDevelopersTheUnseen99.aspx">Dark Matter Developers: The Unseen 99%</a>
-In it, he said:
+### Version 1: Red Light
 
->    [We] hypothesize that there is another kind of developer than the ones we meet all the time.
->    We call them Dark Matter Developers.
->    They don't read a lot of blogs,
->    they never write blogs,
->    they don't go to user groups,
->    they don't tweet or facebook,
->    and you don't often see them at large conferences...
->    [A]s one of the loud-online-pushing-things-forward 1%,
->    I might think I need to find these Dark Matter Developers and explain to them how they need to get online!
->    Join the community!
->    Get a blog, start changing stuff, mix it up!
->    But...those dark matter 99% have a lot to teach us about GETTING STUFF DONE...
->    They aren't chasing the latest beta or pushing any limits,
->    they are just producing.
-
-I'm not as optimistic as Scott, at least, not when it comes to scientific computing.
-I agree that 95% spend their time with their heads down,
-working hard,
-instead of talking about using GPU clouds to personalize collaborative management of reproducible peta-scale workflows,
-or some other permutation of currently-fashionable buzzwords.
-It isn't even because they don't know there's a better way.
-It's because for them, that better way is out of their reach.
-
-A few weeks ago, John Cook <a href="http://www.johndcook.com/blog/2012/01/01/moores-law-squared/">posted</a> the following:
-
->    In a review of linear programming solvers from 1987 to 2002, Bob Bixby says that solvers benefited as much from algorithm improvements as from Moore's law:
->    Three orders of magnitude in machine speed and three orders of magnitude in algorithmic speed add up to six orders of magnitude in solving power.
->    A model that might have taken a year to solve 10 years ago can now solve in less than 30 seconds.
-
-A million-fold speedup is pretty impressive, but faster hardware and better algorithms are only two sides to the triangle.
-The third is development time, and while I think it has improved since 1987, I also think the speedup is measured in single-digit multiples, not orders of magnitude.
-
-Which brings us, again, to <a href="http://en.wikipedia.org/wiki/Amdahl%27s_law">Amdahl's Law</a> and the purpose of Software Carpentry.
-The time needed to produce a new computational result is <em>D+R</em>, where <em>D</em> is how long it takes to get the code to work and <em>R</em> is how long it takes that code to run.
-(In practice, <em>R</em> doesn't go to zero for many interesting scientific applications, because scientists scale up their problems to keep running times constant.  As a colleague of mine once said, every simulation takes roughly one publication cycle to run.)
-<em>R</em> depends on hardware and algorithms; as it goes to zero, the time required to get a new result is dominated by the time required to write, test, maintain, install, and configure software.
-Reducing that is the "effiency" part of our long-term aim to improve novelty, efficiency, and trust.
-
-Distinguish openness, reproducibility, and computational competence.
-
-"It only takes a few minutes to show someone how to write a simple CGI script, or to tweak some PHP to modify a WordPress plugin."
-Well, yes, but that's like saying that it only takes a few minutes to show someone how to start a car and get it out on the road.
-It's what we have to teach people so that they can survive what happens next that takes time. 
-
-----
-
-Suppose you have a processing pipeline with three stages.
-Each stage takes one second to run; what's its overall performance?
-As Roger Hockney pointed out in the 1980s, that question isn't well formed.
-What we really need to ask is,
-how does its performance change as a function of the size of its input?
-It takes 3 seconds to process one piece of data, 4 to process two, 5 to process three, and so on.
-Inverting those numbers, its rate is 1/3 result per second for one piece of data, 2/4 = 1/2 result/sec for two, 3/5 for 3, etc.
-If we draw this curve, we get:
-
-Any pipeline's curve can be characterized by two values:
-<em>r<sub>&infin;</sub></em>,
-which is its performance on an infinitely large data set,
-and <em>n<sub>1/2</sub></em>,
-which is how much data we have to provide to get half of that theoretical peak performance.
-Deep pipelines tend to have high <em>r<sub>&infin;</sub></em> (which is good),
-but also high <em>n<sub>1/2</sub></em> (which is bad);
-shallow pipelines are the reverse.
-
-The more interesting measure is actually <em>p<sub>1/2</sub></em>,
-which is how many programming hours it takes to reach half of a machine's theoretical peak performance.
-On most machines,
-and for most programmers,
-the answer was and is "infinity",
-since most programmers think they're doing well if they can ever achieve 20-25% of the performance that the manufacturer quotes for a piece of hardware.
-
-This idea it underpins a lot of Software Carpentry.
-Our goal is to increase researchers' <em>r<sub>&infin;</sub></em>,
-i.e.,
-to help them produce new science faster.
-Our challenge is to minimize <em>p<sub>1/2</sub></em>,
-so that researchers see benefits early.
-In fact, our real challenge is that learners' performance over time actually looks like this:
-
-That dip is due to Glass's Law:
-every innovation initially slows you down.
-If the dip is too deep,
-or if it takes too long to recover from it,
-most people go back to doing things the way they're used to,
-because that's the safest bet.
-But if learners are working in a group with their peers, they seem to be willing to trust us more (or for longer) than otherwise.
-I don't think this is a case of not wanting to be the first to stop clapping;
-I think instead that with a group of half a dozen or more,
-the odds are good that <em>someone</em> is getting something out of the material at any particular moment, which gives everyone else a reason to carry on.
-
-## Red, Red, Green Blue (or, How We Got Here)
-
-In 1995--96,
+In 1995-96,
 Greg Wilson organized a series of articles titled,
 "What Should Computer Scientists Teach to Physical Scientists and Engineers?"
 [wilson1996][wilson1996].
@@ -161,34 +103,108 @@ John Reynders
 (then director of the Advanced Computing Laboratory at Los Alamos National Laboratory)
 invited Wilson and Brent Gorda (now at Intel)
 to teach a week-long course to LANL staff.
-The course ran for the first time in July 1998,
-and was repeated eight times over the next four years.
-It eventually wound down because the principal players had all moved on to other responsibilities.
+The course ran for the first time in July 1998;
+after several re-starts during the next 12 years,
+Software Carpentry began running two-day bootcamps
+aimed primarily at graduate students
+with at least a little prior programming experience.
 
-What we learned:
+The course eventually wound down as the principals moved on to other projects,
+but several valuable lessons were learned:
 
-* An intensive week-long format works better for scheduling than for learning.
-* We tried to teach traditional software engineering; it's the wrong thing for most scientists.
+1. Intensive week-long courses are easy to schedule (particularly if instructors are traveling)
+   but by the end of the second day,
+   attendees brains are full
+   and learning drops off significantly.
+2. Traditional software engineering is not the right thing to teach most scientists.
+   In particular, careful documentation of requirements and lots of up-front design
+   aren't appropriate to people who (almost by definition)
+   don't yet know what they're trying to do.
+   Agile development methods (which rose to prominence during this period) are less alien,
+   but even those are unsuited to the "solo grad student" model of working
+   which is so common in science.
+   (After all,
+   it's hard to pair program if no one else is working on your code...)
+
+### Versions 2 and 3: Another Red Light
 
 The Software Carpentry course materials
-were updated and released under a Creative Commons license in 2004--05
-thanks to a grant from the Python Software Foundation
+were updated and released under a Creative Commons license in 2004-05
+thanks to support from the Python Software Foundation
 [wilson2006b][wilson2006b].
+They were then used twice in a conventional term-long graduate course
+at the University of Toronto
+aimed at a mix of students from Computer Science and the physical and life sciences.
 
-Ran as a conventional term-long university course twice at the University of Toronto.
+The online materials,
+which were written in point-form lecture slide style,
+attracted 1000-2000 unique visitors/month
+(with occasional spikes correlated to courses and mentions in other sites).
+However:
 
-* Traffic: 1000-2000 unique visitors/month (with spikes correlated to courses).
-* Online lecture notes aren't really useful: people want _lectures_.
-* No Wikipedia effect: good lessons are narratives, not merely facts presented in sequence.
-* An awkward fit at universities:
-  * CS departments believe it's too easy (even though many of their grad students are no better at software dev than anyone else)
-  * Other departments believe CS should offer it (it's clearly not chemistry)
-  * And those departments won't make room: what do they take out?
-  * For example, see blog/2012/12/computer-science-curricula-2013.html for a comparison with the ACM curriculum guidelines
+1. Many potential users reported that online lecture notes weren't very useful on their own.
+   As one said,
+   they were sheet music,
+   when what people wanted was a performance of the song
+   (and even more,
+   the ability to ask questions).
+2. Despite repeated invitations,
+   other people did not contribute updates or new material
+   (other than the occasional bug report).
+   We believe this is related to the previous point:
+   good lessons are narratives,
+   not merely facts presented in sequence,
+   so editing a lesson is more akin to editing a story
+   than to editing a Wikipedia entry.
+3. While grad students (and the occasional faculty member) found the "live" course at Toronto useful,
+   it never found a comfortable institutional home.
+
+This last point deserves elaboration.
+Most Computer Science faculty believe this basic material is too easy to deserve a graduate credit
+(even though many of their students,
+particularly those coming from non-CS backgrounds,
+are no better at software development than anyone else).
+However,
+other departments believe that courses like this ought to be offered by Computer Science,
+in the same way that Mathematics and Statistics departments routinely offer service courses.
+In the absence of an institutional mechanism to offer credit courses at some inter-departmental level,
+this course,
+like many other interdisciplinary courses,
+fell between two stools.
+
+The most important lesson learned in this period,
+though,
+was even more fundamental.
+Many faculty will agree that their students should learn more about computing.
+What they _won't_ agree on is
+what to take out of the current curriculum to make room for it.
+A typical undergraduate chemistry degree has roughly 1800 hours of class and laboratory time;
+anyone who wants to add more programming,
+more statistics,
+more writing,
+or more of anything else
+must either lengthen the program
+or take something out.
+However,
+everything that's in the program is there because it has a passionate defender
+who thinks it's vitally important.
+Saying, "We'll just add a little computing to every other course," is a cheat:
+five minutes per hour adds up to four entire courses in a four-year program.
+Pushing computing down to the high school level is also a non-starter,
+since that curriculum is also full.
+
+The sweet spot for this kind of training is therefore
+the first two or three years of graduate school.
+At that point,
+students have time
+(at least, more time than they'll have once they're faculty)
+and real problems of their own that they want to solve.
+
+## Version 3: Orange Light
 
 Wilson rebooted Software Carpentry in May 2010
 with support from
-(Indiana University,
+Indiana University,
 Michigan State University,
 Microsoft,
 MITACS,
@@ -198,15 +214,59 @@ SciNet,
 SHARCNet,
 and the UK Met Office.
 More than 120 short video lessons were recorded during the following 12 months,
-and six more week-long classes were run.
+and six more week-long classes were run on-site for the backers.
 We also offered an online class three times
-(before the term "MOOC" became widely known).
+(a MOOC _avant la lettre_).
 
-* Clear by mid-2011 that there was more demand for this kind of training than ever.
-  * Data science, scientific blogging, open access publishing, alt metrics...
-* Only a handful of other people (Orion Buske, Tommy Guy, Jason Montojo, Jon Pipitone, and Ethan White) contributed material.
-* MOOC format was disappointing: only 5-10% of starters finished, most because fitting in "makework" around real work was hard.
-* But once again, five eight-hour days are more wearying than enlightening.
+This was our most successful version to date,
+in part because the scientific landscape itself had changed.
+Open access publishing,
+crowd sourcing,
+and dozens of other innovations had convinced scientists
+that programming was now as unavoidable as statistics.
+However,
+most still regarded it is a tax they had to pay in order to get their science done;
+while those of us who teach programming may find it interesting in its own right,
+most of our audience clearly wants to learn as little as they have to
+so that they can get back to the lab
+and finish the paper whose deadline is looming.
+
+Despite this round's success,
+there were several disappointments:
+
+1. Once again,
+   we discovered that five eight-hour days are more wearying than enlightening.
+2. And once again,
+   only a handful of other people contributed material
+   (Orion Buske, Tommy Guy, Jason Montojo, Jon Pipitone, and Ethan White).
+   We believe this was in part because
+   creating video lectures
+   is even more challenging than creating slide-style lectures.
+   Editing or modifying them is harder still:
+   while a typo in a slide can be fixed by opening PowerPoint,
+   making the change,
+   saving,
+   and re-exporting the PDF,
+   inserting new slides into a video
+   and updating the soundtrack
+   seems to take at least half an hour
+   regardless of how small the change is.
+3. Most importantly,
+   the MOOC format didn't work:
+   only 5-10% of those who started with us finished,
+   and the majority were people who already knew most of the material.
+   Both figures are in line with completion rates and learner demographics for other MOOCs,
+   but are no less disappointing because of that.
+
+The biggest take-away from this round,
+though,
+was the need come up with a scalable, sustainable model.
+One instructor simply can't reach enough people,
+and cobbling together funding from half a dozen different sources
+every twelve to eighteen months
+is a high-risk approach.
+
+## Version 4: Green Light
 
 Wilson spent much of the eight months from May to December 2011 rethinking
 and reading the educational literature.
@@ -594,3 +654,20 @@ According to recent research, <a href="http://www.economist.com/node/21554506">a
 
 The parallels with scientific computing practically jump off the page.
 
+----
+
+## Context: The Missing Side of the Triangle
+
+Distinguish openness, reproducibility, and computational competence.
+
+"It only takes a few minutes to show someone how to write a simple CGI script, or to tweak some PHP to modify a WordPress plugin."
+Well, yes, but that's like saying that it only takes a few minutes to show someone how to start a car and get it out on the road.
+It's what we have to teach people so that they can survive what happens next that takes time. 
+
+----
+
+## Bibliography
+
+[cook2012] John D. Cook: "Moore's law squared".  http://www.johndcook.com/blog/2012/01/01/moores-law-squared/, viewed 2013-05-17.
+
+  * For example, see blog/2012/12/computer-science-curricula-2013.html for a comparison with the ACM curriculum guidelines

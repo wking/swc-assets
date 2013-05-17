@@ -31,7 +31,7 @@ and the challenges we now face.
 
 In January 2012,
 John Cook posted this to his widely-read blog
-[cook2012][cook2012]:
+(Cook2012):
 
 > In a review of linear programming solvers from 1987 to 2002,
 > Bob Bixby says that solvers benefited as much from algorithm improvements as from Moore's law:
@@ -75,11 +75,23 @@ and the other unglamorous but time-tested skills
 that help scientists get more done in less time,
 and have more confidence in their results.
 Two independent assessments in 2012 showed that
-attendees are actually learning and applying at least some of what we taught,
-but many still find it hard to turn learning into practice,
+attendees are actually learning and applying at least some of what we taught;
+quoting (Aranda2012):
+
+> ...this assessment concludes that Software Carpentry instruction helps scientists eliminate these weaknesses.
+> The program increases participants' computational understanding,
+> as measured by more than a two-fold (130%) improvement in test scores after the workshop.
+> The program also enhances their habits and routines,
+> and leads them to adopt tools and techniques that are considered standard practice in the software industry.
+> As a result,
+> participants express extremely high levels of satisfaction with their involvement in Software Carpentry
+> (85% learned what they hoped to learn; 95% would recommend the workshop to others).
+
+However,
+many still find it hard to turn learning into practice,
 and several of our experiments---most notably our attempts to teach online---have been failures.
 
-## Red, Red, Orange, Green
+## From Red to Green
 
 Some historical context will help explain
 where and why we have succeeded and failed.
@@ -89,13 +101,13 @@ where and why we have succeeded and failed.
 In 1995-96,
 Greg Wilson organized a series of articles titled,
 "What Should Computer Scientists Teach to Physical Scientists and Engineers?"
-[wilson1996][wilson1996].
+(Wilson1996).
 The articles grew out of the frustration he felt working with scientists
 who wanted to parallelize complex programs
 but didn't know how to modularize their code,
 test it,
 or track changes
-[wilson2006a][wilson2006a]---in short,
+(Wilson2006a)---in short,
 scientists who were trying to run before they could walk.
 
 In response,
@@ -131,7 +143,7 @@ but several valuable lessons were learned:
 The Software Carpentry course materials
 were updated and released under a Creative Commons license in 2004-05
 thanks to support from the Python Software Foundation
-[wilson2006b][wilson2006b].
+(Wilson2006b).
 They were then used twice in a conventional term-long graduate course
 at the University of Toronto
 aimed at a mix of students from Computer Science and the physical and life sciences.
@@ -161,9 +173,10 @@ However:
 
 This last point deserves elaboration.
 Most Computer Science faculty believe this basic material is too easy to deserve a graduate credit
-(even though many of their students,
+(even though a significant minority of their students,
 particularly those coming from non-CS backgrounds,
-are no better at software development than anyone else).
+have no more experience of practical software development
+than the average physicist).
 However,
 other departments believe that courses like this ought to be offered by Computer Science,
 in the same way that Mathematics and Statistics departments routinely offer service courses.
@@ -171,6 +184,20 @@ In the absence of an institutional mechanism to offer credit courses at some int
 this course,
 like many other interdisciplinary courses,
 fell between two stools.
+
+> _It Works Too Well_
+>
+> We have also found that what we teach simply isn't interesting to most computer scientists.
+> They are interested in doing research to advance our understanding of the science of computing;
+> things like command-line history,
+> tab completion,
+> and "select * from table" have been around too long,
+> and work too well,
+> to be publishable any longer.
+> As long as universities reward research first,
+> and supply teaching last,
+> it is simply not in most computer scientists own best interests
+> to offer this kind of course.
 
 The most important lesson learned in this period,
 though,
@@ -200,7 +227,7 @@ students have time
 (at least, more time than they'll have once they're faculty)
 and real problems of their own that they want to solve.
 
-## Version 3: Orange Light
+### Version 4: Orange Light
 
 Wilson rebooted Software Carpentry in May 2010
 with support from
@@ -266,408 +293,474 @@ and cobbling together funding from half a dozen different sources
 every twelve to eighteen months
 is a high-risk approach.
 
-## Version 4: Green Light
-
-Wilson spent much of the eight months from May to December 2011 rethinking
-and reading the educational literature.
-(Should have done this long before...)
+### Version 5: Green Light
 
 With new support from the Sloan Foundation and Mozilla,
-Software Carpentry rebooted again in January 2012.
+Software Carpentry restarted in January 2012.
 This time,
-the model was two-day "boot camps"
-modeled on those pioneered by [The Hacker Within][thw],
+the model was two-day boot camps
+modeled on those pioneered by The Hacker Within,
 a grassroots group of grad students helping grad students
-at the University of Wisconsin -- Madison.
+at the University of Wisconsin - Madison.
+
 Shortening the boot camps made it possible for more people to attend,
-and forced us to think much harder about what skills scientists really needed.
+and increased the proportion of material they retained.
+It also forced us to think much harder about what skills scientists really needed.
+Out went object-oriented programming,
+XML, Make, GUI construction, design patterns,
+software development lifecycles,
+and other equally-useful topics.
+Instead,
+we focused on a handful of key tools---the shell,
+a version control system,
+a scripting language,
+and a unit testing framework---that allowed us to introduce key concepts
+in a hands-on way.
 
-* Explain what we dropped: XML, web programming, OOP
-
-Reaching more people also allowed us to recruit more instructors
-from boot camp participants.
-The results are dramatically better than previous iterations.
-Software Carpentry now has over 70 qualified instructors,
-runs six or seven boot camps a month,
-and is almost self-sustaining financially.
-
-* Explain the "almost": host sites pay expenses, so that scales, but we need a central coordinator.
-* Mention SSI.
+Reaching more people also allowed us to recruit more instructors from boot camp participants,
+which was essential for scaling.
+Switching to a "host site pays travel expenses" model was equally important:
+we still need funding for the coordinator positions
+(one full-time at Mozilla,
+one part-time covered jointly by Mozilla and a donation from Continuum,
+and part of one staff member's time at the Software Sustainability Institute in the UK),
+but all of our other costs now take care of themselves.
 
 ## What We Do
 
 So what does a typical boot camp look like?
 
-* Two days, two instructors, helpers, forty people
-  * As mentioned earlier,
-    our instructors are all volunteers,
-    so the only costs to host sites are travel and accommodation
-    (and coffee, if they choose).
-* Most boot camps are still free, but we are starting to use a $20 cover charge to discourage no-shows
-  * Either we keep it, or we refund it to people who are there both days
-  * Have to be careful not to trip over institutional wires (we charge so they do)
-* Content varies, but a representative agenda is:
-  * Day 1 a.m.:
-    Introduction to Unix shell.
-    We show participants a dozen basic commands,
-    but the real aim is to introduce them to pipes,
-    loops and history (to automate repetitive tasks),
-    and the idea of scripting.
-  * Day 1 p.m.:
-    Version control for file sharing, collaboration, and reproducibility.
-    Now mostly using Git and GitHub (see below).
-  * Day 1 p.m.:
-    If time permits,
-    a quick intro to regular expressions using a graphical tool
-    or to databases and SQL.
-  * Day 2 a.m.:
-    Introduction to Python,
-    but the real goal is to show them when and why to develop code as a set of comprehensible, reusable functions.
-  * Day 2 p.m.:
-    Testing,
-    focusing on the idea of tests as a way to specify what a program is supposed to do,
-    and how to to structure unit tests using an xUnit-style library.
-  * Day 2 p.m.:
-    Number crunching using NumPy (depending on the audience).
-* Common variations:
-  * Command-line vs. IPython Notebook
-    * Notebook can present install/config problems, and need to connect back to batch usage, but a nice teaching tool (esp. with embedded graphics, though hard to convince R users to take Python's matplotlib seriously)
-    * Don't try to use a frozen notebook: code live!
-  * R instead of Python
-    * Some MATLAB lessons in the past, and certainly demand, but we're trying to be as open source as possible
-  * Other version control systems (still some Subversion, some use Hg instead of Git)
-  * Drop databases and do more Python (or cover plotting)
-  * Some discussion of software lifecycles
-  * Occasionally discussion of LaTeX
-  * Not yet much domain-specific content, but as our instructor base grows, we're headed that way.
-  * Multiple rooms (e.g., three-ring circus at U. Washington)
-    * Don't shuffle people between rooms mid-way: too many dependencies
+* _Day 1 a.m._: Introduction to Unix shell.
+  We show participants a dozen basic commands,
+  but the real aim is to introduce them to pipes,
+  loops and history (to automate repetitive tasks),
+  and the idea of scripting.
+* _Day 1 p.m._:
+  Version control for file sharing,
+  collaboration,
+  and reproducibility.
+  We usually use Git and GitHub these days,
+  but some groups teach Mercurial or Subversion.
+  If time permits,
+  we wrap up with something like
+  a quick intro to regular expressions.
+* _Day 2 a.m._:
+  An introduction to Python,
+  the real goal of which is to show them
+  when and why to develop code as a set of comprehensible, reusable functions.
+* _Day 2 p.m._:
+  Testing,
+  focusing on the idea of tests as a way to specify what a program is supposed to do,
+  and how to to structure unit tests using an xUnit-style library.
+  As discussed later,
+  this is probably the weakest part of our standard curriculum.
+* _Day 2 p.m._:
+  Number crunching using NumPy,
+  or some other "beyond mere programming" topic
+  such as an introduction to databases and SQL.
 
-FIXME: we really want to teach the "how" of programming,
-but people come for the "what".
-
-Important:
-we find workshops go a lot better if people come in groups
-(e.g., 4-5 people from one lab, half a dozen from another department or institute, etc.)
-so that they are less inhibited about asking questions
-and can support each other afterward.
-Also increases turnout from under-represented groups:
-women, ESL, etc., are more likely to show up
-if they know they're going to be among people they trust.
-(Mention our code of conduct.)
-
-A note on timing:
-getting grad student at the start of their degrees is less effective
-than getting them when they're far enough in to know that
-they really, really need this.
-
-Why not reproducibility?
-
-* Assume five million scientific papers were published in the decade 1990-2000.
-  (The actual number depends on what you include as a "paper", but our reasoning holds.)
-* Of those, perhaps a hundred have been retracted because of honest computational irreproducibility
-  ("honest", because fraud isn't part of this argument).
-* That means the odds that a scientist will have to retract a particular paper because someone noticed that her calculations couldn't be reproduced are one in fifty thousand.
-* So if the average paper takes eight months to produce,
-  and scientists work six-day weeks,
-  that means it's only worth spending 115 extra seconds per paper on reproducibility as insurance.
-
-Different assumptions and models will naturally produce different answers,
-but won't change the conclusion:
-given the system we have today,
-investing extra time to make work reproducible as insurance against error isn't economical.
-RR's advocates may respond, "That's why we're trying to change the system,"
-but chicken-and-egg traps are notoriously difficult to break out of:
-if people don't care about the reproducibility of their own work,
-they're unlikely to check it when reviewing other people's work, and around and around we go.
-Trying to get them to be an early adopter of new practices
-(which aren't yet rewarded consistently by their peer group)
-is therefore a very hard sell.
-
-This is more than just speculation.
-When we first started teaching Software Carpentry at Los Alamos National Laboratory in 1998,
-we talked a lot about the importance of testing to see if code was correct.
-People nodded politely, but for the most part didn't actually change their working practices.
-Once we started telling them that testing improved productivity by reducing re-work,
+As the comments on the bullets above suggest,
+our real aim isn't to teach Python, Git, or any other specific tool:
+it's to teach _computational competence_.
+We can't do this in the abstract:
+people won't show up for a hand-waving talk,
+and even if they do,
+they won't understand.
+If we show them how to solve a specific problem with a specific tool,
 though,
-we got significantly more uptake.
-Why?
-Because if you cut the time per paper (or other deliverable) from eight months to seven or six,
-you've given people an immediate, tangible reward, regardless of what their peers may or may not do.
+we can then lead into a larger discussion of
+how scientists ought to develop, use, and curate software.
 
-So here's my advice to advocates of reproducible research:
-talk about how it helps the individual researcher get more done in less time.
-Better yet,
-measure that and publish the results.
-Scientists have been trained to respect data;
-if you can show them how much extra effort RR takes using today's tools,
-versus how much re-work and rummaging around it saves,
-they'll find your case much more compelling.
+We also try hard to show people how the pieces fit together:
+how to write a Python script that fits into a Unix pipeline,
+how to automate their unit tests,
+etc.
+Doing this gives us a chance to reinforce ideas,
+and also increases the odds of them being able to apply what they've learned
+once the boot camp is over.
 
-----
+Of course,
+there are a lot of local variations around the template outlined above.
+Some instructors use the command-line Python interpreter,
+but a growing number have adopted the [http://ipython.org/notebook.html](IPython Notebook).
+There are occasional installation problems,
+and instructors do need to remember to connect what they've shown
+to command-line (batch) usage,
+but it has proven to be an excellent teaching and learning environment.
+Its only real shortcoming isn't its fault:
+Python's plotting libraries simply aren't compelling
+to people who've been spoiled by R...
 
-A couple of people have contacted us recently to ask about running Software Carpentry boot camps for companies.
-Our material is all Creative Commons licensed,
-so anyone who wants to use it for corporate training can do so, and doesn't need our permission.
-What _does_ is using our name and logo,
-since they're trademarked.
-We're happy to give that permission if we've certified the instructor and have a chance to double-check the content.
-(We've already had one instance of someone calling something "Software Carpentry" when it had nothing to do with what we usually teach.
-We've worked hard to create material that actually helps scientists,
-and to build some name recognition around it,
-and we'd like to make sure our name continues to mean something.).
-It would be great if starving grad students could help pay their bills from this,
-in the way that many programmers earn part or all of their living from open source software.
+And speaking of R,
+we have now run several boot camps using it instead of Python,
+and expect this number to grow.
+While some people feel that using R instead of Python
+is like using feet and pounds instead of the metric system,
+it is the _lingua franca_ of statistical computing,
+particularly in the life sciences.
+A handful of boot camps also cover tools such as LaTeX,
+or domain-specific topics such as audio file processing.
+We hope to do more of the latter going forward
+now that we have enough instructors to specialize.
 
-## What Makes Us Different
+We aim for 40 people per workshop,
+though we have gone as small as 9
+and as large as 120.
+We do _not_ recommend going over 40 in a single room:
+instead,
+we try to arrange multiple rooms,
+and multiple instructors,
+so that every learner can receive some personal attention.
+When we do this,
+we try not to shuffle people from one room to another
+between the first and second day:
+with the best inter-instructor coordination in the world,
+it still results in duplication,
+missed topics,
+and jokes that make no sense.
 
-The big idea that ties all of this together isn't actually the Unix philosophy;
-it's that programming is a human activity.
+Our boot camps have traditionally been free,
+but we are starting to use a $20 cover charge to discourage no-shows.
+(We have had boot camps where only half of those who signed up actually attended,
+which is demoralizing for instructors.)
+Even when we treat this charge as a deposit,
+and refund it to participants who attended both days,
+we must be very careful not to trip over institutional rules
+about commercial use of their space:
+some universities will charge us hundreds or thousands of dollars per day
+for using their classrooms
+if any money changes hands at any point.
 
-* Short-term memory can only hold so much at a time, so build things to fit into it.
- * We're most productive when we're not being interrupted (or interrupting ourselves), so use tools that support an interactive do-and-see flow.
- * People are fallible, so make defense in depth a habit (i.e., check your data, figure out how to test things before you write them, run regression tests, etc.).
+> _Commercial Offerings_
+> 
+> Our material is all Creative Commons licensed,
+> so anyone who wants to use it for corporate training can do so
+> without explicit permission from us.
+> We encourage this:
+> it would be great if graduate students could help pay their bills
+> by sharing what they know,
+> in the way that many programmers earn part or all of their living
+> from working on open source software.
+>
+> What _does_ require permission is use of our name and logo,
+> both of which are trademarked.
+> We're happy to give that permission if we've certified the instructor
+> and have a chance to double-check the content,
+> but we do want a chance to check:
+> we have had one instance of someone calling something "Software Carpentry"
+> when it had nothing to do with what we usually teach.
+> We've worked hard to create material that actually helps scientists,
+> and to build some name recognition around it,
+> and we'd like to make sure our name continues to mean something.
 
-----
+As well as insructors,
+we rely local helpers
+to wander the room and answer questions during practicals.
+These helpers may be participants in previous boot camps
+who are interested in becoming instructors,
+grad students who've picked up some or all of this on their own,
+or members of the local open source community;
+where possible,
+we aim to have at least one helper for every eight learners.
 
-* We keep looking for things we can throw away, rather than things we can add.
-  A few well-chosen concepts,
-  well illustrated,
-  is much more useful to our audience than a pile of facts.
-  * This is part of why these courses aren't offered by CS departments:
-    everyting we teach is old enough to (a) work well and (b) no longer be publishable.
-    Command-line history, tab completion, putting things in scripts:
-    old had to some, rocket science to others.
-* Boot camps are interactive and hands-on:
-  we tell instructors that if learners haven't typed in the last 15 minutes,
-  they're talking too much.
-* No slides!
-  Live coding lets learners see how people grow programs
-  (which is very hard to capture in video).
-  Also encourages instructors to follow learners' lead,
-  and not to go too long without breaks.
-* They are peer-taught.
-  Our instructors are scientists
-  (many of whom have gone through boot camps themselves in the recent past),
-  so the focus is very much "how does this improve research productivity"
-  rather than "hey, here's some cool programming tools".
-  * We don't promote software development skills, techniques and tools
-    as being essential because software developers use them and so the
-    attendees should too. Rather, understand what motivates the
-    attendees and promote how these skills, techniques and tools
-    address these motivations (e.g. scripting -> automation -> less
-    mistakes + free up time for research, or testing -> spot mistakes
-    in code -> prevent errors being introduced into your vital data)
-    etc.
-* We show people how the pieces fit together:
-  how to write a Python script that fits into a Unix pipeline,
-  how to automate their unit tests,
-  etc.
-* Focus on the carpentry level rather than engineering (explain the metaphor).
-  * More appropriate for most scientists
-  * More approachable too
-* We are as open as we can be: grant proposals, feedback, etc., are all there.
-  The fact that people can see us actively succeeding, failing, and learning
-  buys us some credibility and respect.
-* Our learners are highly motivated.
-  They never _have_ to be there,
-  and they're usually highly motivated.
-* We eat our own cooking,
-  e.g.,
-  use GitHub ourselves for the web site, course materials, etc.
-* We come to the learners, not vice versa.
-  E.g., we continue to support all three major platforms,
-  even though it's a lot more work for us.
-* Etherpad!
-  Don't ask student's to copy long URLs from your presentation to their computers.
-* Sticky notes!
-  Simple but effective teaching practice.
-* Pair programming!
-  A good practice in real life, a great way to teach.
-* Starting with plain text files is good (easy to check correctness).
-  * IPythonBlocks is another good tool (explain)
-* Public good/bad feedback after every bootcamp
-* Trying to base our teaching on empirical research:
-  * What we know about learning and teaching (in general, and shout out to Guzdial)
-  * What we know about software engineering
+We find workshops go a lot better if people come in groups,
+e.g.,
+4-5 people from one lab,
+half a dozen from another department or institute,
+etc.
+They are less inhibited about asking questions,
+and can support each other
+(morally and technically)
+when the time comes to put what they've learned into practice
+after the boot camp is over.
+Group signups also yield
+much higher turnout from groups that are otherwise often under-represented,
+such as women and minority students,
+since they know in advance that they will be in a supportive environment.
+
+Other lessons include:
+
+_Live coding_
+:   We use live coding rather than slides:
+    it's more convincing,
+    it enables instructors to be more responsive to "what if?" questions,
+    and it facilitates lateral knowledge transfer
+    (i.e.,
+    people learn more than we realized we were teaching them by watching us work).
+    This does put more of a burden on instructors than a pre-packaged slide deck,
+    but most find it more fun.
+_Open everything_
+:   Our grant proposals,
+    mailing lists,
+    feedback from boot camps,
+    and everything else that isn't personally sensitive
+    is out in the open.
+    While we can't prove it,
+    we believe that the fact that people can see us actively succeeding, failing, and learning
+    buys us some credibility and respect.
+_Use what we teach_
+:   We also make a point of eating our own cooking,
+    e.g.,
+    we use GitHub for our web site and to plan boot camps.
+    Again,
+    this buys us credibility,
+    and gives instructors a chance to do some hands-on practice
+    with the things they're going to teach.
+_Meet the learners on their own ground_
+:   Learners tell us that
+    it's important to them to leave the boot camp
+    with their own working environment set up.
+    We therefore continue to teach on all three major platforms
+    (Linux, Mac OS X, and Windows),
+    even though it would be simpler to require learners to use just one.
+    We are experimenting with virtual machines on learners' machines or in the cloud
+    to reduce installation problems,
+    but those introduce problems of their own:
+    older or smaller machines simply aren't fast enough,
+    and again,
+    it's important to many learners
+    to leave with their machines set up.
+_Collaborative note-taking_
+:   We often use [http://etherpad.org](Etherpad)
+    for collaborative note-taking
+    and to share snippets of code and small data files with learners.
+    (If nothing else,
+    it saves us from having to ask students
+    to copy long URLs from the presenter's screen to their computers.)
+    It is almost always mentioned positively in post-workshop feedback,
+    and several boot camp participants have started using it in their own teaching.
+_Sticky notes and minute cards_
+:   Giving each learner two sticky notes of different colors
+    allows instructors to do quick true/false questions as they're teaching.
+    It also allows real-time feedback during hands-on work:
+    learners can put a green sticky on their laptop when they have something done,
+    or a red sticky when they need help.
+    We also use them as minute cards:
+    before each break,
+    learners take a minute to write
+    one thing they've learned on the green sticky,
+    and one thing they found confusing (or too fast or too slow) on the red sticky.
+    It only takes a couple of minutes to collate these,
+    and allows instructors to adjust to learners' interests and speed.
+_Pair programming_
+:   Pairing is a good practice in real life,
+    and an even better way to teach:
+    partners can not only help each other out during the practical,
+    but clarify each other's misconceptions when the solution is presented,
+    and discuss common research interests during breaks.
+    To facilitate it,
+    we strongly prefer flat seating to banked (theater-style) seating;
+    this also makes it easier for helpers to reach learners who need assistance.
 
 ## Instructor Training
 
-FIXME: write about the training course.
+To help people teach,
+we now run an [http://teaching.software-carpentry.org](online training course)
+for would-be instructors.
+It takes 2-4 hours/week of their time for 12-14 weeks
+(depending on scheduling interruptions),
+and introduces them to the basics of educational psychology,
+instructional design,
+and how these things apply to teaching programming.
+It's necessarily very shallow,
+but most participants report that they find the material interesting as well as useful.
 
-Why do people become instructors?
+So why do people volunteer as instructors?
 
-* _Make the world a better place._ As I say in a lot of my talks, the two things we need to get through the next hundred years are more science and more courage.  I don't know if we can do much about the latter, but we can sure help a lot with the former.
-* _Make their own lives better._ Most of the time, we try to have astronomers teach astronomers, ecologists teach ecologists, and so on.  These are people whose tools instructors might one day want to use themselves, so by making them more clueful, instructors are helping themselves.
-* _It's fun._  How could it not be?  You get to stand up and look smart in front of a bunch of smart people who actually want to be there, and you don't have to mark anything afterward.
-* _Build a reputation._  Showing up to run a really useful workshop is a great way for people to introduce themselves to places they'd eventually like to work, and a great way to make contact with potential collaborators.  This is probably the most important reason from Software Carpentry's point of view, since it's what makes our model sustainable.
-* _Get practice teaching._  We're doing more every year to train instructors, and giving them chances to teach online as well&mdash;both of which are useful for people with academic careers in mind.
-* _Help get people of diverse backgrounds into the pipeline._ Computer Science is 12-15% female, and that figure has been _dropping_ since the 1980s.  From what I've seen, there's a similar gender skew among computationally-oriented people in other sciences, which if left alone will be self-perpetuating.  Some of our instructors are involved in part because they want to break that cycle and be a public example of a competent, confident woman programmer.
-* _Teaching forces you to learn new things, or learn old things in more detail than you already know._ See for example "<a href="http://www.sciencemag.org/content/333/6045/1037.abstract">Graduate Students' Teaching Experiences Improve Their Methodological Research Skills</a>"
-* _The more you know, the less you have to write yourself._ Putting a grant application together? Have a site review coming up?  We probably have slides for that... :-)
-
-----
-
-Jeffrey Mirel and Simona Goldin's recent article in <em>The Atlantic</em> titled "<a href="http://www.theatlantic.com/national/archive/2012/04/alone-in-the-classroom-why-teachers-are-too-isolated/255976/">Alone in the Classroom</a>" initially struck a chord with me, particularly when they said, "A recent study by Scholastic and the Gates Foundation found that teachers spend only about 3 percent of their teaching day collaborating with colleagues. The majority of American teachers plan, teach, and examine their practice alone." But then Mirel and Goldin blew it by saying:
-
->    So what would it take structurally to enable teachers to work collaboratively for improved learning outcomes?
->
->    Perhaps the most important change is in school curricula.
->    One of the key differences between public education in the U.S. and elsewhere is the lack of a common curriculum.
->    In other countries common curricula unite the work of teachers, school leaders, teacher educators, students, and parents.
->    With a common curriculum there is agreement about what students are expected to learn,
->    what teachers are to teach,
->    what teacher educators are to instill in potential teachers,
->    and what tests of student learning should measure.
->
->    A common curriculum for the nearly 100,000 K-12 schools in the U.S. could be a major step towards productive teacher collaboration.
-
-No---a common curriculum won't improve teaching, and the things that _will_ don't need a common curriculum.
-To understand why, have a look at another article in _The Atlantic_ from last December titled,
-"<a href="http://www.theatlantic.com/national/archive/2011/12/what-americans-keep-ignoring-about-finlands-school-success/250564/">What Americans Keep Ignoring About Finland's School Success</a>",
-which is based in part on Pasi Sahlberg's book <a href="http://www.amazon.com/Finnish-Lessons-Educational-Change-Finland/dp/0807752576/">_Finnish Lessons_</a>.
-Sahlberg and others believe that the key to Finland's success are
-(a) the fact that teachers are respected as professionals in a way they no longer are in North America,
-and
-(b) the fact that when they say, "No child will be left behind," they actually mean it:
-
->    It is possible to create equality.
->    And perhaps even more important---as a challenge to the American way of thinking about education reform---Finland's experience shows that
->    it is possible to achieve excellence by focusing not on competition,
->    but on cooperation,
->    and not on choice,
->    but on equity.
->
->    The problem facing education in America isn't the ethnic diversity of the population but the economic inequality of society,
->    and this is precisely the problem that Finnish education reform addressed.
->    More equity at home might just be what America needs to be more competitive abroad.
-
-The question of how much commonality in the curriculum should be enforced vs. how much freedom instructors should have to adapt to local needs
-is clearly relevant to Software Carpentry,
-particularly when we start thinking about standards for responsible conduct of computational research.
-More important, I think, are the questions of professionalism and equity:
-how do we develop a cadre of instructors who know what to teach,
-and how to teach it,
-and how do we level the computational playing field so that everyone doing research has a fair shot at acquiring and using these skills?
+_To make the world a better place._
+:   The two things we need to get through the next hundred years are more science and more courage;
+    by helping scientists do more in less time,
+    we are helping with the former.
+_To make their own lives better._
+:   Most of the time, we try to have astronomers teach astronomers, ecologists teach ecologists, and so on.
+    These are people whose tools instructors might one day want to use themselves,
+    so by helping them,
+    instructors are helping themselves.
+_To build a reputation._
+:   Showing up to run a workshop is a great way for people to introduce themselves
+    to places they'd eventually like to work,
+    and a great way to make contact with potential collaborators.
+    This is probably the most important reason from Software Carpentry's point of view,
+    since it's what makes our model sustainable.
+_To practice teaching._
+:   This is also important to people contemplating academic careers.
+_To help get people of diverse backgrounds into the pipeline._
+:   Computing is 12-15% female,
+    and that figure has been _dropping_ since the 1980s.
+    While figures on female participation in computational science are hard to come by,
+    a simple head count shows the same gender skew.
+    Some of our instructors are involved in part because
+    they want to break that cycle.
+_To learn new things, or learn old things in more detail._
+:   Working alongside an instructor with more experience
+    is a great way to learn more about the tools,
+    as well as about teaching.
+_It's fun._
+:   Our instructors get to work with smart people who actually want to be  in the room,
+    and don't have to mark anything afterward.
+    It's a refreshing change from teaching undergraduate calculus...
 
 ## What's Not Working
 
-Getting people to record themselves solving tasks as a graduation exercise.
+We've learned a lot,
+and we're doing a much better job of reaching and teaching people
+than we did eighteen months ago,
+but there are still many things we need to improve.
 
-Diversity of backgrounds/skill levels is a killer:
-only long-term solution is to split by level
-(which we can start to do now that we have more instructors).
-Problem is,
-people have a hard time self-selecting;
-currently trialing an assessment so that we can at least give instructors a heads-up.
+The biggest challenge we face is
+the diversity of our learners' backgrounds and skill levels.
+No matter what we teach,
+and how fast or how slow we go,
+20% or more of the room will be lost,
+and there's a good chance that a different 20% will be bored.
+The obvious solution,
+now that we have enough instructors to implement it,
+is to split people by level.
+The problem with that is figuring out what their levels are:
+if we ask them to assess themselves,
+they regularly under- or over-estimate their knowledge,
+while giving them a proficiency test
+scares away the people we most want to help.
 
-Only now doing the long-term post follow-up to see what impact we've had.
+We are currently testing a short pre-assessment questionnaire
+intended to give instructors a better idea of
+what their audience knows (and doesn't know)
+before each boot camp starts.
+We hope that will lead to some reliable way to stream learners,
+but short of one-to-one interviews,
+we believe this problem will never go away.
 
-Diversity of platforms / install headaches
+Our other big challenge is a longer-term issue.
+We believe we're helping scientists be more productive,
+but we're only just starting to do
+the long-term, quantitative follow-up needed to prove this.
+This is only partly because of limited resources:
+the fact is,
+no one knows how to measure the productivity of programmers,
+or the productivity of scientists,
+and putting the two together doesn't make the unknowns cancel out.
+Again,
+we are developing post-assessments to find out
+what people actually adopt after boot camps,
+and whether they feel it has helped them,
+but measuring actual impact is a much harder problem.
 
-After-the-bootcamp follow-up still isn't working
+> _Git vs. Subversion_
+>
+> One of the reasons we need to do long-term follow-up is
+> to find out for our own benefit
+> whether we're teaching the right things the right way.
+> For example,
+> some of us believe that Subversion is significantly easier for novices to understand than Git
+> because there are fewer places data can reside
+> and fewer steps in its normal workflow.
+> Others believe just as strongly that there is no difference,
+> or that Git is actually easier to learn.
+> While learnability isn't the only concern---the large social network
+> centered around GitHub is a factor as well---we would obviously be able
+> to make better decisions
+> if we had some.
 
-We take text editors for granted and we shouldn't.
+Our third challenge is that
+getting software installed is often harder than using it.
+This is a hard enough problem for experienced users,
+but almost by definition our audience is _inexperienced_,
+and our learners don't (yet) know about system paths,
+environment variables,
+the half-dozen places configuration files can lurk on a modern system,
+and so on.
+Combine that with two version of Mac OS X,
+three of Windows,
+and two oddball Linux installations,
+and it's almost inevitable that
+every time we introduce a new tool,
+it won't work as expected (or at all)
+for at least one person in the room.
 
-Don't do a good job of testing _scientific_ software (nobody does), but hoping to fix that as we move to media-first.
+> _Edit This_
+>
+> And while it may seem like a trivial thing,
+> editing text is always harder than we expect.
+> We don't want to encourage people to use naive editors like Notepad,
+> and the two most popular legacy editors on Unix (Vi and Emacs)
+> are both usability nightmares.
+> We now recommend a collection of open and almost-open GUI editors,
+> but it remains a stumbling block.
 
-We still don't have exercises right: not enough, not diverse enough, not the right levels (some people lost, some bored)
-That said, we do a good job of spotting people who are bored and turning them into helpers.
+Challenge #4 is to move more of our teaching and follow-up online.
+We have tried several approaches,
+from MOOC-style online-only offerings
+to webcast tutorials
+and one-to-one online office hours via VoIP and desktop sharing.
+In all cases,
+turnout has been mediocre at the start
+and dropped off rapidly.
 
-Git vs. Subversion: but we really don't know (yet).
-Not the only thing we don't know: see blog/2013/04/spreadsheets-retractions-and-bias.html about our biases.
+Fifth on our list is the tension between
+teaching the "what" and the "how" of programming.
+When we teach a scripting language like Python,
+we have to spend time up front on syntax,
+which leaves us only limited time for
+the development practices that we really want to focus on,
+but which are hard to grasp in the abstract.
+By comparison,
+version control and databases are straightforward:
+what you see is what you do is what you get.
 
-Online office hours have been a bust.
+We also don't as good a job as we would like teaching testing.
+The mechanics of unit testing with an xUnit-style framework are straightforward,
+and it's easy to come up with representative test cases
+for things like reformatting data files,
+but what should we tell scientists about testing the numerical parts of their applications?
+Once we've covered floating-point roundoff
+and the need to use "almost equal" instead of "exactly equal",
+our learners quite reasonably ask,
+"What should I use as a tolerance for my computation?"
+Saying,
+"One part in a million, just because," isn't satisfying...
 
-When teaching Python we tend to spend too much time on syntax and
-basic programming issues instead of focusing on the core SWC materials
-(better programming skills for those who already know how to
-program). Teaching a programming language from scratch makes much
-harder to focus on good programming practices (even if you're teaching
-proficient programmers).  On the other hand, items such as
-version control and databases are quite straight to the point. They
-are self contained and fit very well in a couple of hours of teaching
-time. Plus: most people understand straight away how they can adopt
-(or not) them in their own work.
-
-Still sometimes dive into details...
-
-We're not teaching the web, and we need to.
+Finally,
+we try to make our teaching as interactive as possible,
+but we still don't give learners hands-on exercises
+as frequently as we should.
+We also don't give them as diverse a range of exercises as we should,
+and those that we do give
+are often at the wrong level.
+This is partly due to a lack of time,
+but disorganization on our part is also a contributing factor.
 
 ## Conclusions
 
-* The future is here, it's just not equally accessible.
-  * Hard to do many of the cool things people are excited about without basic computing skills.
-  * Impossible to know what new things of your own are already done/easy/hard/impossible.
-* Driver's license exam is one way forward, RCR is another.
-* We need to teach the rest of the lifecycle (esp. data management and communication)
-* Hardest part: getting the powers that be to care about this
+To paraphrase William Gibson,
+the future is already here---it's just that
+the skills needed to implement it aren't evenly distributed.
+A small number of scientists can easily build
+an application that scours the web for recently-published data,
+launch a cloud computing node to compare it to home-grown data sets,
+and push the result to a GitHub account;
+others are still struggling to free their data from Excel
+and figure out which of the nine backup versions of their paper
+is the one they sent for publication.
 
-I realized a couple of days ago that I'd never blogged about
-what Software Carpentry needs to accomplish in order to change the practice of science fundamentally and permanently.
-In a nutshell,
-we need to convert a fifth of scientists to our way of thinking.
-Once we do that,
-the odds are better than 50-50 that every time someone sends a paper out for review,
-at least one reviewer will ask hard questions about how the computational work was done.
-I get that number by assuming:
-
-    Number of Reviewers | Fraction of Papers
-    2                   | 10%
-    3                   | 40%
-    4                   | 40%
-    5                   | 10%
-
-So means the probability that none of a paper's reviewers will ask the right questions is 46.5%.
-It's a grossly simplistic model, but at least it gives us something to shoot for.
-
-- Why we don't teach reproducible research (yet)
-  - Scientists don't care (above) and the tools aren't ready (don't add enough value early enough)
-- We don't know nearly enough about real scientific software dev cycles, good or bad (just a few point samples from the top end)
-  - So the best we can do is give them the pieces out of which most people we know assemble their workflows
-- Include sample pre-assessment?
-- Include demographic survey
-- Mention assessments (Libarkin and Aranda)
-
-From Aranda:
-
->    More importantly, this assessment concludes that Software Carpentry instruction helps scientists eliminate these weaknesses.
->    The program increases participants' computational understanding, as measured by more than a two-fold (130%) improvement in test scores after the workshop.
->    The program also enhances their habits and routines, and leads them to adopt tools and techniques that are considered standard practice in the software industry.
->    As a result, participants express extremely high levels of satisfaction with their involvement in Software Carpentry
->    (85% learned what they hoped to learn; 95% would recommend the workshop to others).
->
->    While the outcome is largely positive, there are areas for improvement.
->    Two of note are the spread in expertise among participants and the barriers that they face to change their software practice.
->    The first problem leads to some participants feeling that the instruction is too advanced or too basic for them.
->    The second problem damages the impact of Software Carpentry instruction,
->    as participants learn valuable material,
->    but find that for other reasons they are unable to adopt the relevant tools and techniques.
-
-----
-
-According to recent research, <a href="http://www.economist.com/node/21554506">an absence of optimism plays a large role in keeping people trapped in poverty</a>:
-
->    This hopelessness manifests itself in many ways.
->    One is a sort of pathological conservatism,
->    where people forgo even feasible things with potentially large benefits for fear of losing the little they already possess.
-
-The parallels with scientific computing practically jump off the page.
-
-----
-
-## Context: The Missing Side of the Triangle
-
-Distinguish openness, reproducibility, and computational competence.
-
-"It only takes a few minutes to show someone how to write a simple CGI script, or to tweak some PHP to modify a WordPress plugin."
-Well, yes, but that's like saying that it only takes a few minutes to show someone how to start a car and get it out on the road.
-It's what we have to teach people so that they can survive what happens next that takes time. 
-
-----
+The fact is,
+it's hard for scientists to do the cool things
+their colleagues are excited about without basic computing skills,
+and impossible for them to know what other new things are possible.
+Our ambition is to change that:
+not just to make scientists more productive today,
+but to allow them to be part of the changes
+that are transforming science in front of our eyes.
+If you would like to help,
+we'd like to hear from you.
 
 ## Bibliography
 
-[cook2012] John D. Cook: "Moore's law squared".  http://www.johndcook.com/blog/2012/01/01/moores-law-squared/, viewed 2013-05-17.
+Aranda2012: Jorge Aranda: Report on Software Carpentry. FIXME: need citation.
 
-  * For example, see blog/2012/12/computer-science-curricula-2013.html for a comparison with the ACM curriculum guidelines
+Cook2012: John D. Cook: "Moore's law squared".  http://www.johndcook.com/blog/2012/01/01/moores-law-squared/, viewed 2013-05-17.
+
+Wilson1996: Gregory V. Wilson: "What Should Computer Scientists Teach to Physical Scientists and Engineers?" *IEEE Computational Science & Engineering*, Summer-Fall 1996.
+
+Wilson2006a: Greg Wilson: "Where's the Real Bottleneck in Scientific Computing?" *American Scientist*, January-February 2006.
+
+Wilson2006b: Greg Wilson: "Software Carpentry: Getting Scientists to Write Better Code by Making Them More Productive" *Computing in Science & Engineering*, November-December 2006.

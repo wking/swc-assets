@@ -1,5 +1,5 @@
 BIBTEX=bibtex
-CONVERT=redcarpet
+CONVERT=pandoc
 LATEX=pdflatex
 SCLL=software-carpentry-lessons-learned
 

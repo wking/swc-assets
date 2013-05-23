@@ -4,15 +4,21 @@ Welcome to the Software Carpentry study group.  Over the next 12 weeks, we will 
 
 To get started:
 
-1. I've added you to this mailing list, which we will use to coordinate activities, discuss ideas, etc.
+1. I've added you to the 'teaching05@lists.software-carpentry.org' list, which we will use to coordinate activities, discuss ideas, etc.
 
-2. I've also created an account for you on the http://teaching.software-carpentry.org blog --- you should have received email a few minutes ago with your login ID (which is just your first and last name), and your password. We'll use this blog to share our work and to give one another feedback --- please have a look to see what previous participants have done.
+2. I've also created an account for you on the http://teaching.software-carpentry.org blog --- you should receive email with your login ID (which is just your first and last name), and your password. We'll use this blog to share our work and to give one another feedback --- please have a look to see what previous participants have done.
 
-3. We'll use two books in this training: "How Learning Works" (a good summary of research in education and its practical application dating from 2010) and "Facts & Fallacies of Software Engineering" (which is a bit dated, but still the best lightweight introduction around to what we actually know about programming and software).  You'll find links to both on the blog's "About" page (http://teaching.software-carpentry.org/about/) along with links to other things you may find interesting.  Please pick up a copy of "How Learning Works" as soon as possible; you won't need "Facts & Fallacies" for another six weeks (and when you do, you'll probably only need to borrow it from a library rather than buy it).
+3. We'll use two books in this training: "How Learning Works" (a good summary of research in education and its practical application dating from 2010) and "Facts & Fallacies of Software Engineering" (which is a bit dated, but still the best lightweight introduction around to what we actually know about programming and software).  You'll find links to both on the blog's "About" page (http://teaching.software-carpentry.org/about/) along with links to other things you may find interesting.
 
-4. Just to make sure everything's working, please log in to the teaching blog and write a three-line bio for yourself (see http://teaching.software-carpentry.org/category/biography/ for examples from previous rounds).  Please put it in the category 'Biography' (we use categories rather than tags on this blog, because I'm old-fashioned).
+Please pick up a copy of "How Learning Works" as soon as possible, and read the first two chapters.  You won't need "Facts & Fallacies" for another six weeks (and when you do, you'll probably only need to borrow it from a library rather than buy it).
 
-5. Our first meeting will be some time in the week of May 20-24.  We'll have two meetings in order to accommodate people's time zones (you'll only be asked to attend one), and I'll post possible times in a couple of days.  We will use +1 800 707 2533 for the conference call --- you can connect directly inside North America, and connect via Skype from elsewhere free of charge.  When you connect, the password is 369 (*without* a '#' after it), and the conference ID is 7618 (*with* a '#' after it).  Please try to use a headset with a microphone rather than an open-air microphone or a cell phone in speaker mode to connect --- feedback and background noise can be pretty disruptive.  Please also open a browser tab during the meeting to https://etherpad.mozilla.org/swc-teaching, and fill in your name in the upper right --- we'll use this for note-taking during the call.
+4. Just to make sure everything's working, please log in to the teaching blog and write a three-line bio for yourself (see http://teaching.software-carpentry.org/category/biography/ for examples from previous rounds).  Please add it touuf the category 'Biography' (we use categories rather than tags to keep things findable).
+
+5. Our first meeting will be on Thursday, May 23 at 11:00 am, with a re-run at 7:00 pm (all times Eastern --- I'm in Toronto).  Please attend whichever is most convenient in your time zone
+
+We will use +1 800 707 2533 for the conference call --- you can connect directly inside North America, and connect via Skype from elsewhere free of charge.  When you connect, the password is 369 (*without* a '#' after it), and the conference ID is 7618 (*with* a '#' after it).  Please try to use a headset with a microphone rather than an open-air microphone or a cell phone in speaker mode to connect --- feedback and background noise can be pretty disruptive.
+
+Please also open a browser tab during the meeting to https://etherpad.mozilla.org/swc-teaching, and fill in your name in the upper right --- we'll use this for note-taking during the call.
 
 Thanks again for agreeing to take part in our instructor training --- I think you'll have fun, and I'm looking forward to getting to know you better.
 Cheers,

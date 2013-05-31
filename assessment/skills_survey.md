@@ -68,8 +68,8 @@ The following answers are required.
  * Tech support, lab tech, or support programmer
  * Admin
  * Other: _________________
- 
-** In three sentences or less, please describe your current field of work or your research question.**
+
+**In three sentences or less, please describe your current field of work or your research question.**
 
 **What OS will you use on the laptop you bring to the workshop?**
  * Linux
@@ -77,9 +77,11 @@ The following answers are required.
  * Windows
  
 **What programming languages are you comfortable with, if any?**
+
 Name up to three programming languages, or none.
 
 **What best describes how you currently program? **
+
 Choose the answer that is the closest approximation.
  * I have never programmed.
  * I have programmed before, but I don't now.
@@ -88,33 +90,34 @@ Choose the answer that is the closest approximation.
  * I regularly work on large, complicated programs.
  
 #### Scenarios
+
 In each of the following scenarios, please select the answer that best applies to you.
  
-**A tab-delimited file has two columns showing the date and the highest temperature on that day. Write a program to produce a graph showing the average highest temperature for each month. **
+**A tab-delimited file has two columns showing the date and the highest temperature on that day. Write a program to produce a graph showing the average highest temperature for each month.**
  * I wouldn't know where to start.
  * I couldn't do this task with a program, but I could do it with a spreadsheet.
  * I could probably struggle through writing a program to do this task.
  * I could do this task easily.
 
-**A directory contains 1000 text files. Create a list of all files that contain the word "Drosophila" and save the result to a file called results.txt. **
+**A directory contains 1000 text files. Create a list of all files that contain the word "Drosophila" and save the result to a file called results.txt.**
  * I wouldn't know where to start.
  * I would use "Find in Files" and "copy and paste."
  * I could probably struggle through it using the shell.
  * I could easily do this task in the shell using a pipeline of several commands
 
-**Given the URL for a project on GitHub, check out a working copy of that project, add a file called?notes.txt, and commit the change. **
+**Given the URL for a project on GitHub, check out a working copy of that project, add a file called?notes.txt, and commit the change.**
  * What's GitHub?
  * I wouldn't know where to start.
  * I could struggle through it.
  * I could do this task easily.
 
-**Given a 200-line function to test, write half a dozen tests using a unit testing framework and use code coverage to check that they exercise every line of the function. **
+**Given a 200-line function to test, write half a dozen tests using a unit testing framework and use code coverage to check that they exercise every line of the function.**
  * What's a unit testing framework? And what's code coverage?
  * I wouldn't know where to start.
  * I could struggle through it.
  * I could do this task easily.
 
-**A database has two tables: Scientist and Lab. Scientist's columns are the scientist's user ID, name, and email address; Lab's columns are lab IDs, lab names, and scientist IDs. Write an SQL statement that counts the number of scientists in each lab. **
+**A database has two tables: Scientist and Lab. Scientist's columns are the scientist's user ID, name, and email address; Lab's columns are lab IDs, lab names, and scientist IDs. Write an SQL statement that counts the number of scientists in each lab.**
  * What's an SQL statement?
  * I wouldn't know where to start.
  * I could struggle through it.

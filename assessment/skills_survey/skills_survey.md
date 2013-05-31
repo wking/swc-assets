@@ -9,6 +9,8 @@ Your name:  _________________
 
 Email address: _________________
 
+-----
+
 ### Demographic Information
 
 Funding agencies sometimes require us to report the following demographic
@@ -40,6 +42,8 @@ information about our participants.  The next three questions are optional.
  * Prefer not to say
  * Other: _________________
  
+-----
+
 ### Your programming experience
 The following answers are required.
  
@@ -80,7 +84,7 @@ The following answers are required.
 
 Name up to three programming languages, or none.
 
-**What best describes how you currently program? **
+**What best describes how you currently program?**
 
 Choose the answer that is the closest approximation.
  * I have never programmed.
@@ -88,6 +92,8 @@ Choose the answer that is the closest approximation.
  * I write a couple of dozen lines every once for my own use.
  * I write a few hundred lines a month, which other people occasionally use.
  * I regularly work on large, complicated programs.
+ 
+ -----
  
 ### Scenarios
 

@@ -1,5 +1,5 @@
 ## Software Carpentry Boot Camp
-#### Skills Survey
+### Skills Survey
 
 Please answer the following questions to the best of your ability. This survey will help us assess participants' existing computer and programming skills. Your answers will be used for research, and to help your instructors learn more about you.
 
@@ -9,7 +9,7 @@ Your name:  _________________
 
 Email address: _________________
 
-#### Demographic Information
+### Demographic Information
 
 Funding agencies sometimes require us to report the following demographic
 information about our participants.  The next three questions are optional.
@@ -40,7 +40,7 @@ information about our participants.  The next three questions are optional.
  * Prefer not to say
  * Other: _________________
  
-#### Your programming experience
+### Your programming experience
 The following answers are required.
  
 **What is your career stage?**
@@ -89,7 +89,7 @@ Choose the answer that is the closest approximation.
  * I write a few hundred lines a month, which other people occasionally use.
  * I regularly work on large, complicated programs.
  
-#### Scenarios
+### Scenarios
 
 In each of the following scenarios, please select the answer that best applies to you.
  

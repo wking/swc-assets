@@ -5,7 +5,7 @@ This survey should be distributed approximately two weeks before the boot camp o
 
 **The survey** is in `skills_survey.md`.
 
-**Sample data** is stored in `skills_survey_data.md`.
+**Sample data** is stored in `skills_survey_data.xlxs` and `skills_survey_data.htm`.
 
 **Metadata** for the sample data is in `skills_survey_metadata.xlsx`.
 

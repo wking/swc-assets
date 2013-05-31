@@ -7,7 +7,7 @@ Note: Data gathered using this survey is for internal use only and will be anony
 
 Your name:  _________________
 
-Email address: ________________
+Email address: _________________
 
 #### Demographic Information
 
@@ -24,12 +24,11 @@ information about our participants.  The next three questions are optional.
  * 75 or older
  * Prefer not to say
  
- **What is your gender?**
+**What is your gender?**
  * Female
  * Male
  * Prefer not to say
- * Other: __________
- 
+ * Other: _________________
  
 **What is your ethnicity? (Choose all that apply)**
  * African/African American/Black
@@ -39,8 +38,7 @@ information about our participants.  The next three questions are optional.
  * Native Hawaiian/Pacific Islander
  * Native American
  * Prefer not to say
- * Other: ______________
- 
+ * Other: _________________
  
 #### Your programming experience
 The following answers are required.
@@ -52,9 +50,9 @@ The following answers are required.
  * Faculty
  * Industry
  * Support staff
- * Other: ___________
+ * Other: _________________
  
-**What is your discipline? **
+**What is your discipline?**
  * Space sciences
  * Physics
  * Chemistry
@@ -69,16 +67,16 @@ The following answers are required.
  * Humanities and social sciences
  * Tech support, lab tech, or support programmer
  * Admin
- * Other: 
+ * Other: _________________
  
-** In three sentences or less, please describe your current field of work or your research question. **
+** In three sentences or less, please describe your current field of work or your research question.**
 
-**What OS will you use on the laptop you bring to the workshop? **
+**What OS will you use on the laptop you bring to the workshop?**
  * Linux
  * OS X
  * Windows
  
- What programming languages are you comfortable with, if any?
+**What programming languages are you comfortable with, if any?**
 Name up to three programming languages, or none.
 
 **What best describes how you currently program? **

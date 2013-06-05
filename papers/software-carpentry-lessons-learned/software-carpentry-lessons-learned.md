@@ -10,6 +10,7 @@
 * Neil Chue Hong (Software Sustainability Institute / N.ChueHong@epcc.ed.ac.uk)
 * Katy Huff (University of  Wisconsin / khuff@cae.wisc.edu)
 * Michael Jackson (Edinburgh Parallel Computing Centre / michaelj@epcc.ed.ac.uk)
+* W. Trevor King (Drexel University / wking@drexel.edu)
 * Justin Kitzes (University of California, Berkeley / jkitzes@berkeley.edu)
 * Stephen McGough (University of Newcastle / stephen.mcgough@newcastle.ac.uk) 
 * Lex Nederbragt (University of Oslo / lex.nederbragt@ibv.uio.no)
@@ -498,6 +499,18 @@ _Open everything_
     While we can't prove it,
     we believe that the fact that people can see us actively succeeding, failing, and learning
     buys us some credibility and respect.
+_Open lessons_
+:   This is an important special case of the previous point.
+    Anyone who wants to use our lessons can take what we have,
+    make changes,
+    and offer those back by sending us a pull request on GitHub.
+    A common workflow in the open source world,
+    it is still foreign to most scientists and educators
+    (not least because file formats like Excel and PowerPoint
+    don't play nicely with version control).
+    This "eat your own dogfood" approach to teaching
+    is allowing us to scale more quickly and more cheaply
+    than the centralized approaches being taken by many online education ventures.
 _Use what we teach_
 :   We also make a point of eating our own cooking,
     e.g.,

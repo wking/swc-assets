@@ -46,7 +46,7 @@ The third is programming itself,
 and while improvements to languages and tools have undoubtedly made software developers more productive since 1987,
 the speedup is measured in percentages,
 not orders of magnitude.
-Outwith the minority who do high-performance computing,
+Outside of high-performance computing,
 the time it takes the silent majority of scientists to produce a new computational result
 is increasingly dominated by the time required to write, test, debug, install, and maintain software.
 
@@ -383,7 +383,7 @@ once the boot camp is over.
 Of course,
 there are a lot of local variations around the template outlined above.
 Some instructors use the command-line Python interpreter,
-but a growing number have adopted the [http://ipython.org/notebook.html](IPython Notebook).
+but a growing number have adopted the [IPython Notebook](http://ipython.org/notebook.html).
 There are occasional installation problems,
 and instructors do need to remember to connect what they've shown
 to command-line (batch) usage,
@@ -534,7 +534,7 @@ _Meet the learners on their own ground_
     it's important to many learners
     to leave with their machines set up.
 _Collaborative note-taking_
-:   We often use [http://etherpad.org](Etherpad)
+:   We often use [Etherpad](http://etherpad.org)
     for collaborative note-taking
     and to share snippets of code and small data files with learners.
     (If nothing else,
@@ -568,7 +568,7 @@ _Pair programming_
 ## Instructor Training
 
 To help people teach,
-we now run an [http://teaching.software-carpentry.org](online training course)
+we now run an [online training course](http://teaching.software-carpentry.org)
 for would-be instructors.
 It takes 2-4 hours/week of their time for 12-14 weeks
 (depending on scheduling interruptions),
@@ -671,8 +671,7 @@ but measuring actual impact is a much harder problem.
 > or that Git is actually easier to learn.
 > While learnability isn't the only concern---the large social network
 > centered around GitHub is a factor as well---we would obviously be able
-> to make better decisions
-> if we had some.
+> to make better decisions if we had more quantitative data to base them on.
 
 Our third challenge is that
 getting software installed is often harder than using it.

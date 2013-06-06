@@ -627,7 +627,7 @@ _To learn new things, or learn old things in more detail._
     is a great way to learn more about the tools,
     as well as about teaching.
 _It's fun._
-:   Our instructors get to work with smart people who actually want to be  in the room,
+:   Our instructors get to work with smart people who actually want to be in the room,
     and don't have to mark anything afterward.
     It's a refreshing change from teaching undergraduate calculus...
 

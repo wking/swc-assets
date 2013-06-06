@@ -23,10 +23,12 @@
 ## Abstract
 
 Over the last 15 years,
-Software Carpentry has evolved into a worldwide volunteer effort
-to raise standards in scientific computing.
-This article explain what we have learned as we've grown,
-and the challenges we now face.
+Software Carpentry has evolved from
+a week-long training course at the US national laboratories
+into a worldwide volunteer effort to raise standards in scientific computing.
+This article explain what we have learned along the way
+the challenges we now face,
+and our plans for the future.
 
 ## Introduction
 
@@ -41,45 +43,41 @@ John Cook posted this to his widely-read blog
 > A model that might have taken a year to solve 10 years ago can now solve in less than 30 seconds."
 
 A million-fold speedup is impressive,
-but faster hardware and better algorithms are only two sides to the iron triangle of programming.
+but hardware and algorithms are only two sides of the iron triangle of programming.
 The third is programming itself,
-and while improvements to languages and tools have undoubtedly made software developers more productive since 1987,
-the speedup is measured in percentages,
-not orders of magnitude.
-Outside of high-performance computing,
-the time it takes the silent majority of scientists to produce a new computational result
-is increasingly dominated by the time required to write, test, debug, install, and maintain software.
+and while improvements to languages, tools, and practices
+have undoubtedly made software developers more productive since 1987,
+the speedup is percentages rather than orders of magnitude.
+Setting aside the minority who do high-performance computing (HPC),
+the time it takes the "desktop majority" of scientists to produce a new computational result
+is increasingly dominated by how long it takes to write, test, debug, install, and maintain software.
 
 The problem is,
-most scientists have never been taught how to do this.
-Their undergraduate programs typically include either
-a generic introduction to programming,
+most scientists are never taught how to do this.
+While their undergraduate programs may include
+a generic introduction to programming
 or a statistics or numerical methods course
-in which they're expected to pick up programming on their own;
+(in which they're often expected to pick up programming on their own),
 they are almost never told that version control exists,
 and rarely if ever shown how to design a maintainable program in a systematic way,
-or how to turn the last twenty commands they typed
-into a re-usable script.
+or how to turn the last twenty commands they typed into a re-usable script.
 As a result,
 they routinely spend hours doing things that could be done in minutes,
-or failing to do things at all because they don't know where to start.
+or don't do things at all because they don't know where to start.
 
 This is where Software Carpentry comes in.
 We ran 92 two-day workshops between January 2012 and July 2013.
 In them,
-more than 100 people helped over 3000 scientists learn about
+more than 100 volunteer instructors helped over 3000 scientists learn about
 program design,
 task automation,
 version control,
 testing,
-and the other unglamorous but time-tested skills
-that help scientists get more done in less time,
-and have more confidence in their results.
+and other unglamorous but time-tested skills.
 Two independent assessments in 2012 showed that
 attendees are actually learning and applying at least some of what we taught;
 quoting (Aranda2012):
 
-> ...this assessment concludes that Software Carpentry instruction helps scientists eliminate these weaknesses.
 > The program increases participants' computational understanding,
 > as measured by more than a two-fold (130%) improvement in test scores after the workshop.
 > The program also enhances their habits and routines,
@@ -88,9 +86,10 @@ quoting (Aranda2012):
 > participants express extremely high levels of satisfaction with their involvement in Software Carpentry
 > (85% learned what they hoped to learn; 95% would recommend the workshop to others).
 
-However,
-many still find it hard to turn learning into practice,
-and several of our experiments---most notably our attempts to teach online---have been failures.
+Despite these generally positive results,
+many researchers still find it hard to apply what we teach to their own work,
+and several of our experiments---most notably
+our attempts to teach online---have been failures.
 
 ## From Red to Green
 
@@ -100,79 +99,73 @@ where and why we have succeeded and failed.
 ### Version 1: Red Light
 
 In 1995-96,
-Greg Wilson organized a series of articles titled,
+Greg Wilson organized a series of articles in *IEEE Computational Science & Engineering* titled,
 "What Should Computer Scientists Teach to Physical Scientists and Engineers?"
 (Wilson1996).
-The articles grew out of the frustration he felt working with scientists
-who wanted to parallelize complex programs
-but didn't know how to modularize their code,
-test it,
-or track changes
-(Wilson2006a)---in short,
-scientists who were trying to run before they could walk.
+The articles grew out of the frustration he had working with scientists
+who wanted to run before they could walk---i.e.,
+to parallelize complex programs that weren't broken down into self-contained functions,
+that didn't have any automated tests,
+and that weren't under version control (Wilson2006a).
 
 In response,
 John Reynders
 (then director of the Advanced Computing Laboratory at Los Alamos National Laboratory)
 invited Wilson and Brent Gorda (now at Intel)
-to teach a week-long course to LANL staff.
-The course ran for the first time in July 1998;
-after several re-starts during the next 12 years,
-Software Carpentry began running two-day bootcamps
-aimed primarily at graduate students
-with at least a little prior programming experience.
-
-The course eventually wound down as the principals moved on to other projects,
+to teach a week-long course on these topics to LANL staff.
+The course ran for the first time in July 1998,
+and was repeated nine times over the next four years.
+It eventually wound down as the principals moved on to other projects,
 but several valuable lessons were learned:
 
 1. Intensive week-long courses are easy to schedule (particularly if instructors are traveling)
    but by the end of the second day,
    attendees brains are full
    and learning drops off significantly.
-2. Traditional software engineering is not the right thing to teach most scientists.
-   In particular, careful documentation of requirements and lots of up-front design
-   aren't appropriate to people who (almost by definition)
+2. Textbook software engineering is not the right thing to teach most scientists.
+   In particular,
+   careful documentation of requirements and lots of up-front design
+   aren't appropriate for people who (almost by definition)
    don't yet know what they're trying to do.
-   Agile development methods (which rose to prominence during this period) are less alien,
-   but even those are unsuited to the "solo grad student" model of working
-   which is so common in science.
-   (After all,
-   it's hard to pair program if no one else is working on your code...)
+   Agile development methods (which rose to prominence during this period)
+   are a less bad fit to researchers' needs,
+   but even they are not well suited to the "solo grad student" model of working
+   so common in science.
 
 ### Versions 2 and 3: Another Red Light
 
 The Software Carpentry course materials
-were updated and released under a Creative Commons license in 2004-05
+were updated and released in 2004-05
+as point-form slides
+under a Creative Commons license
 thanks to support from the Python Software Foundation
 (Wilson2006b).
 They were then used twice in a conventional term-long graduate course
 at the University of Toronto
 aimed at a mix of students from Computer Science and the physical and life sciences.
 
-The online materials,
-which were written in point-form lecture slide style,
-attracted 1000-2000 unique visitors/month
-(with occasional spikes correlated to courses and mentions in other sites).
+The materials attracted 1000-2000 unique visitors/month,
+with occasional spikes correlated to courses and mentions in other sites.
 However:
 
-1. Many potential users reported that online lecture notes weren't very useful on their own.
-   As one said,
-   they were sheet music,
-   when what people wanted was a performance of the song
-   (and even more,
-   the ability to ask questions).
+1. While grad students (and the occasional faculty member) found the "live" course at Toronto useful,
+   it never found a comfortable institutional home.
 2. Despite repeated invitations,
    other people did not contribute updates or new material
-   (other than the occasional bug report).
+   beyond an occasional bug report.
    We believe this is related to the previous point:
    good lessons are narratives,
    not merely facts presented in sequence,
    so editing a lesson is more akin to editing a story
    than to editing a Wikipedia entry.
-3. While grad students (and the occasional faculty member) found the "live" course at Toronto useful,
-   it never found a comfortable institutional home.
+3. Many potential users reported that online lecture notes weren't very useful on their own.
+   As one said,
+   they were sheet music,
+   but novices wanted a performance
+   (and even more,
+   the ability to ask questions).
 
-This last point deserves elaboration.
+The first two points deserve further elaboration.
 Most Computer Science faculty believe this basic material is too easy to deserve a graduate credit
 (even though a significant minority of their students,
 particularly those coming from non-CS backgrounds,
@@ -200,26 +193,46 @@ fell between two stools.
 > it is simply not in most computer scientists own best interests
 > to offer this kind of course.
 
+Second,
+piecemeal improvement is normal in open source development,
+but Wikipedia aside,
+it is still rare in other fields.
+In particular,
+people often use one another's slide decks as starting points for their own courses,
+but rarely offer their changes back to the original author
+in order to improve it.
+This is partly because educators' preferred file formats (Word, PowerPoint, and PDF)
+can't be handled gracefully by existing version control systems,
+but more importantly,
+there simply isn't a "culture of contribution" in education
+for projects like Software Carpentry to build on.
+
 The most important lesson learned in this period,
 though,
 was even more fundamental.
-Many faculty will agree that their students should learn more about computing.
+Many faculty in science, engineering, and medicine
+will agree that their students should learn more about computing.
 What they _won't_ agree on is
 what to take out of the current curriculum to make room for it.
-A typical undergraduate chemistry degree has roughly 1800 hours of class and laboratory time;
+A typical undergraduate science degree has roughly 1800 hours of class and laboratory time;
 anyone who wants to add more programming,
 more statistics,
 more writing,
 or more of anything else
 must either lengthen the program
+(which is financially and institutionally infeasible)
 or take something out.
 However,
-everything that's in the program is there because it has a passionate defender
-who thinks it's vitally important.
-Saying, "We'll just add a little computing to every other course," is a cheat:
-five minutes per hour adds up to four entire courses in a four-year program.
-Pushing computing down to the high school level is also a non-starter,
-since that curriculum is also full.
+everything in the program is there because it has a passionate defender
+who thinks it's vitally important,
+and who is likely senior to those faculty advocating the change.
+
+> _It Adds Up_
+> 
+> Saying, "We'll just add a little computing to every other course," is a cheat:
+> five minutes per hour adds up to four entire courses in a four-year program.
+> Pushing computing down to the high school level is also a non-starter,
+> since that curriculum is also full.
 
 The sweet spot for this kind of training is therefore
 the first two or three years of graduate school.
@@ -241,8 +254,8 @@ Scimatic,
 SciNet,
 SHARCNet,
 and the UK Met Office.
-More than 120 short video lessons were recorded during the following 12 months,
-and six more week-long classes were run on-site for the backers.
+More than 120 short video lessons were recorded during the subsequent 12 months,
+and six more week-long classes were run for the backers.
 We also offered an online class three times
 (a MOOC _avant la lettre_).
 
@@ -251,15 +264,16 @@ in part because the scientific landscape itself had changed.
 Open access publishing,
 crowd sourcing,
 and dozens of other innovations had convinced scientists
-that programming was now as unavoidable as statistics.
+that knowing how to program
+was now as important to doing science
+as knowing how to do statistics.
 However,
-most still regarded it is a tax they had to pay in order to get their science done;
-while those of us who teach programming may find it interesting in its own right,
-most of our audience clearly wants to learn as little as they have to
-so that they can get back to the lab
-and finish the paper whose deadline is looming.
+most still regarded it as a tax they had to pay in order to get their science done.
+Those of us who teach programming may find it interesting in its own right,
+but most scientists clearly want to learn as little as they have to
+in order to finish the paper whose deadline is looming.
 
-Despite this round's success,
+Despite this round's overall success,
 there were several disappointments:
 
 1. Once again,
@@ -268,8 +282,7 @@ there were several disappointments:
    only a handful of other people contributed material
    (Orion Buske, Tommy Guy, Jason Montojo, Jon Pipitone, and Ethan White).
    We believe this was in part because
-   creating video lectures
-   is even more challenging than creating slide-style lectures.
+   creating videos is significantly more challenging than creating slides.
    Editing or modifying them is harder still:
    while a typo in a slide can be fixed by opening PowerPoint,
    making the change,
@@ -286,9 +299,7 @@ there were several disappointments:
    Both figures are in line with completion rates and learner demographics for other MOOCs,
    but are no less disappointing because of that.
 
-The biggest take-away from this round,
-though,
-was the need come up with a scalable, sustainable model.
+The biggest take-away from this round was the need come up with a scalable, sustainable model.
 One instructor simply can't reach enough people,
 and cobbling together funding from half a dozen different sources
 every twelve to eighteen months
@@ -296,11 +307,12 @@ is a high-risk approach.
 
 ### Version 5: Green Light
 
-With new support from the Sloan Foundation and Mozilla,
-Software Carpentry restarted in January 2012.
+Software Carpentry restarted once again in January 2012
+with a new grant from the Sloan Foundation,
+and backing from the Mozilla Foundation.
 This time,
 the model was two-day boot camps
-modeled on those pioneered by The Hacker Within,
+like those pioneered by The Hacker Within,
 a grassroots group of grad students helping grad students
 at the University of Wisconsin - Madison.
 
@@ -310,22 +322,36 @@ It also forced us to think much harder about what skills scientists really neede
 Out went object-oriented programming,
 XML, Make, GUI construction, design patterns,
 software development lifecycles,
-and other equally-useful topics.
+and other topics.
 Instead,
-we focused on a handful of key tools---the shell,
-a version control system,
-a scripting language,
-and a unit testing framework---that allowed us to introduce key concepts
-in a hands-on way.
+we focused on a handful of tried-and-true tools
+that let us introduce higher-level concepts without learners really noticing.
 
 Reaching more people also allowed us to recruit more instructors from boot camp participants,
 which was essential for scaling.
-Switching to a "host site pays travel expenses" model was equally important:
+Switching to a "host site covers costs" model was equally important:
 we still need funding for the coordinator positions
 (one full-time at Mozilla,
 one part-time covered jointly by Mozilla and a donation from Continuum,
 and part of one staff member's time at the Software Sustainability Institute in the UK),
-but all of our other costs now take care of themselves.
+but our other costs now take care of themselves.
+
+Our two-day boot camps have been an unqualified success.
+Both the number of boot camps,
+and the number of people attending,
+have grown steadily:
+
+![Cumulative Number of Boot Camps](bootcamps.png)
+
+![Cumulative Enrolment](enrolment.png)
+
+More importantly,
+feedback from participants is strongly positive.
+While there are continuing problems with software setup
+and the speed of instruction (discussed below),
+80-90% of attendees typically report that
+they were glad they attended
+and would recommend the boot camps to colleagues.
 
 ## What We Do
 
@@ -333,32 +359,33 @@ So what does a typical boot camp look like?
 
 * _Day 1 a.m._: Introduction to Unix shell.
   We show participants a dozen basic commands,
-  but the real aim is to introduce them to pipes,
-  loops and history (to automate repetitive tasks),
-  and the idea of scripting.
+  but the real aim is to introduce them to the ideas of
+  combining single-purpose tools (via pipes and filters)
+  to achieve desired effects,
+  and to getting the computer to repeat things
+  (via command completion, history, and loops)
+  so that people don't have to.
 * _Day 1 p.m._:
-  Version control for file sharing,
-  collaboration,
-  and reproducibility.
-  We usually use Git and GitHub these days,
-  but some groups teach Mercurial or Subversion.
+  We begin by emphasizing how it's a better way to collaborate than FTP or Dropbox,
+  but end by showing them how it's essential for making computational research reproducible.
+* _Day 1 p.m._:
   If time permits,
-  we wrap up with something like
-  a quick intro to regular expressions.
+  we close with a relatively light introduction to something that is self-contained
+  and relatively undemanding,
+  such as the basics of regular expressions.
 * _Day 2 a.m._:
-  An introduction to Python,
-  the real goal of which is to show them
-  when and why to develop code as a set of comprehensible, reusable functions.
+  An introduction to Python (or sometimes R).
+  The real goal is to show them
+  when, why, and how to grow programs incrementally as a set of comprehensible, reusable functions.
 * _Day 2 p.m._:
-  Testing,
-  focusing on the idea of tests as a way to specify what a program is supposed to do,
-  and how to to structure unit tests using an xUnit-style library.
-  As discussed later,
-  this is probably the weakest part of our standard curriculum.
+  Testing.
+  We introduce the idea of tests as a way to specify what a program is supposed to do,
+  then show participants how to build and run unit tests
+  to ensure that they're making progress rather than just making changes.
 * _Day 2 p.m._:
-  Number crunching using NumPy,
-  or some other "beyond mere programming" topic
-  such as an introduction to databases and SQL.
+  A "beyond mere programming" topic,
+  such as number crunching using NumPy,
+  or an introduction to databases and SQL.
 
 As the comments on the bullets above suggest,
 our real aim isn't to teach Python, Git, or any other specific tool:
@@ -383,17 +410,10 @@ once the boot camp is over.
 Of course,
 there are a lot of local variations around the template outlined above.
 Some instructors use the command-line Python interpreter,
-but a growing number have adopted the [IPython Notebook](http://ipython.org/notebook.html).
-There are occasional installation problems,
-and instructors do need to remember to connect what they've shown
-to command-line (batch) usage,
-but it has proven to be an excellent teaching and learning environment.
-Its only real shortcoming isn't its fault:
-Python's plotting libraries simply aren't compelling
-to people who've been spoiled by R...
+but a growing number have adopted the [IPython Notebook](http://ipython.org/notebook.html),
+which has proven to be an excellent teaching and learning environment.
 
-And speaking of R,
-we have now run several boot camps using it instead of Python,
+We have also now run several boot camps using R instead of Python,
 and expect this number to grow.
 While some people feel that using R instead of Python
 is like using feet and pounds instead of the metric system,
@@ -504,13 +524,10 @@ _Open lessons_
     Anyone who wants to use our lessons can take what we have,
     make changes,
     and offer those back by sending us a pull request on GitHub.
-    A common workflow in the open source world,
-    it is still foreign to most scientists and educators
-    (not least because file formats like Excel and PowerPoint
-    don't play nicely with version control).
-    This "eat your own dogfood" approach to teaching
-    is allowing us to scale more quickly and more cheaply
-    than the centralized approaches being taken by many online education ventures.
+    As mentioned earlier,
+    this workflow is still foreign to most educators,
+    but it is allowing us to scale more quickly and more cheaply
+    than the centralized approaches being taken by many high-profile online education ventures.
 _Use what we teach_
 :   We also make a point of eating our own cooking,
     e.g.,
@@ -578,7 +595,7 @@ and how these things apply to teaching programming.
 It's necessarily very shallow,
 but most participants report that they find the material interesting as well as useful.
 
-So why do people volunteer as instructors?
+Why do people volunteer as instructors?
 
 _To make the world a better place._
 :   The two things we need to get through the next hundred years are more science and more courage;
@@ -590,9 +607,8 @@ _To make their own lives better._
     so by helping them,
     instructors are helping themselves.
 _To build a reputation._
-:   Showing up to run a workshop is a great way for people to introduce themselves
-    to places they'd eventually like to work,
-    and a great way to make contact with potential collaborators.
+:   Showing up to run a workshop is a great way for people to introduce themselves to colleagues,
+    and to make contact with potential collaborators.
     This is probably the most important reason from Software Carpentry's point of view,
     since it's what makes our model sustainable.
 _To practice teaching._
@@ -603,7 +619,9 @@ _To help get people of diverse backgrounds into the pipeline._
     While figures on female participation in computational science are hard to come by,
     a simple head count shows the same gender skew.
     Some of our instructors are involved in part because
-    they want to break that cycle.
+    they want to help break that cycle
+    by participating in activities like our boot camp for women in science and engineering
+    in Boston in June 2013.
 _To learn new things, or learn old things in more detail._
 :   Working alongside an instructor with more experience
     is a great way to learn more about the tools,
@@ -643,7 +661,18 @@ We hope that will lead to some reliable way to stream learners,
 but short of one-to-one interviews,
 we believe this problem will never go away.
 
-Our other big challenge is a longer-term issue.
+Our second-biggest problem is long-term financial sustainability.
+The "host site covers costs" model allows us to offer more boot camps,
+but we still need to pay for
+the 2 full-time equivalent coordinating positions at the center of it all.
+Charging $40-50 per learner would do this,
+but as mentioned earlier,
+roughly one third of sites won't let us do this,
+and it seems unfair to charge some but not others.
+We are currently exploring other possibilities,
+including various forms of sponsorship.
+
+Our third big challenge is a longer-term issue.
 We believe we're helping scientists be more productive,
 but we're only just starting to do
 the long-term, quantitative follow-up needed to prove this.
@@ -658,7 +687,7 @@ what people actually adopt after boot camps,
 and whether they feel it has helped them,
 but measuring actual impact is a much harder problem.
 
-> _Git vs. Subversion_
+> _Meeting Our Own Standards_
 >
 > One of the reasons we need to do long-term follow-up is
 > to find out for our own benefit
@@ -673,7 +702,7 @@ but measuring actual impact is a much harder problem.
 > centered around GitHub is a factor as well---we would obviously be able
 > to make better decisions if we had more quantitative data to base them on.
 
-Our third challenge is that
+Fourth,
 getting software installed is often harder than using it.
 This is a hard enough problem for experienced users,
 but almost by definition our audience is _inexperienced_,
@@ -699,7 +728,7 @@ for at least one person in the room.
 > We now recommend a collection of open and almost-open GUI editors,
 > but it remains a stumbling block.
 
-Challenge #4 is to move more of our teaching and follow-up online.
+Challenge #5 is to move more of our teaching and follow-up online.
 We have tried several approaches,
 from MOOC-style online-only offerings
 to webcast tutorials
@@ -708,7 +737,7 @@ In all cases,
 turnout has been mediocre at the start
 and dropped off rapidly.
 
-Fifth on our list is the tension between
+Sixth on our list is the tension between
 teaching the "what" and the "how" of programming.
 When we teach a scripting language like Python,
 we have to spend time up front on syntax,

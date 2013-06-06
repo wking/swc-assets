@@ -366,6 +366,9 @@ So what does a typical boot camp look like?
   (via command completion, history, and loops)
   so that people don't have to.
 * _Day 1 p.m._:
+  Version control for file sharing,
+  collaboration,
+  and reproducibility.
   We begin by emphasizing how it's a better way to collaborate than FTP or Dropbox,
   but end by showing them how it's essential for making computational research reproducible.
 * _Day 1 p.m._:

@@ -526,7 +526,7 @@ _Open lessons_
     and offer those back by sending us a pull request on GitHub.
     As mentioned earlier,
     this workflow is still foreign to most educators,
-    but it is allowing us to scale more quickly and more cheaply
+    but it is allowing us to scale and adapt more quickly and more cheaply
     than the centralized approaches being taken by many high-profile online education ventures.
 _Use what we teach_
 :   We also make a point of eating our own cooking,
